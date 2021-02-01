@@ -2,6 +2,7 @@ var app = angular.module('indexApp', []);
 app.controller('indexCtrl', function ($scope, $http) {
 
     document.getElementById("inputform").style.display = "none";
+    document.getElementById("table").style.display = "none";
 
     ///company
     $http({
@@ -42,18 +43,37 @@ app.controller('indexCtrl', function ($scope, $http) {
                     $scope.idCompany = item.company.nameCompany;
                 })
                 document.getElementById("inputform").style.display = "block";
+                document.getElementById("table").style.display = "block";
             }
         }, function myError(response) {
             $scope.employee = response.statusText;
         });
     }
 
+    var arraytable = [];
     $scope.submitform = function (idProvince, datestart, dateend) {
         if (datestart > dateend) {
             alert("Start day cannot be greater than End day");
         }
-        else{
-            
+        else {
+            var arrayta = [];
+            arrayta.idProvince = idProvince;
+            arrayta.datestart = datestart;
+            arrayta.dateend = dateend;
+            arraytable.push(arrayta);
+            // CLEAR TEXTBOX.
+            $scope.idProvince = null;
+            $scope.datestart = null;
+            $scope.dateend = null;
         }
+        console.log(arraytable);
+    }
+
+    $scope.submittable = function () {
+        var arrMovie = [];
+        angular.forEach(arraytable, function (value) {
+            arrMovie.push('idProvince:' + value.idProvince + ', datestart:' + value.datestart + ', dateend:' + value.dateend);
+        });
+        console.log(arrMovie);
     }
 })
