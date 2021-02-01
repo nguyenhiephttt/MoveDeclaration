@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid " ng-app='IndexApp'>
+    <div class="container-fluid">
         <div class="container ">
             <div class="row mt-3">
                 <div class="col-12 bg-light p-3">
@@ -65,32 +65,32 @@
                         </div>
                     </form>
                     <h6 class="mt-4">Thông tin lịch trình di chuyển/Move declaration </h6>
-                    <form>
+                    <form name="declarationForm">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Tỉnh thành/Province</label>
-                                <select id="inputState" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option>...</option>
+                                <select id="inputState" class="form-control" name="idProvince" id="idProvince"
+                                ng-model="idProvince" ng-required="true">
+                                <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
+                                    value="{{x.idProvince}}">{{x.nameProvince}}</option>
                                 </select>
                             </div>
-
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Từ ngày/ Date from</label>
-                                <input type="date" class="form-control" id="inputPassword4" value="Nguyen Van A">
+                                <input type="date" class="form-control" id="datestart" ng-model="datestart" ng-required="true">
                             </div>
 
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Đến ngày/Date to</label>
-                                <input type="date" class="form-control" id="inputPassword4" value="Nguyen Van A">
+                                <input type="date" class="form-control" id="dateend" ng-model="dateend" ng-required="true">
                             </div>
 
                         </div>
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit"  ng-disabled="declarationForm.$invalid" class="btn btn-success" ng-click="submitform(idProvince,datestart,dateend)">Submit</button>
                     </form>
                 </div>
             </div>

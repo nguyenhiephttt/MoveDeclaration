@@ -15,11 +15,11 @@ app.controller('indexCtrl', function ($scope, $http) {
 
     $http({
         method: "GET",
-        url: "http://localhost:8086/Companys"
+        url: "http://localhost:8086/Provinces"
     }).then(function mySuccess(response) {
-        $scope.Companys = response.data;
+        $scope.Provinces = response.data;
     }, function myError(response) {
-        $scope.Companys = response.statusText;
+        $scope.Provinces = response.statusText;
     });
 
     // $scope.idCompany = "1";
@@ -32,7 +32,7 @@ app.controller('indexCtrl', function ($scope, $http) {
             var idtemp;
             $scope.employee = response.data;
             if ($scope.employee == 0) {
-                alert("k có tồn tại");
+                alert("Unique ID does not exist");
             }
             else {
                 angular.forEach($scope.employee, function (item) {
@@ -46,5 +46,14 @@ app.controller('indexCtrl', function ($scope, $http) {
         }, function myError(response) {
             $scope.employee = response.statusText;
         });
+    }
+
+    $scope.submitform = function (idProvince, datestart, dateend) {
+        if (datestart > dateend) {
+            alert("Start day cannot be greater than End day");
+        }
+        else{
+            
+        }
     }
 })
