@@ -9,96 +9,89 @@
     <title>Move declaration</title>
 </head>
 
-<body>
-    <div class="<div class=" container">
-        <!-- Image and text -->
-        <nav class="navbar navbar-light bg-primary">
-            <a class="navbar-brand " href="#">
-                <div class="container">
-                    <div class="row">
-                        <h4 class="text-light">Trang khai báo lịch trình di chuyển/ Move declaration</h4>
-                    </div>    
+<body ng-app="indexApp" ng-controller="indexCtrl">
+    <div class="container-fluid">
+        <div class="row bg-primary">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                <h4 class="text-light">Trang khai báo lịch trình di chuyển/ Move declaration</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid " ng-app='IndexApp'>
+        <div class="container ">
+            <div class="row mt-3">
+                <div class="col-12 bg-light p-3">
+                    <h6 class="mt-4">Kiểm tra thông tin nhân viên/Check employee infomation</h6>
+                    <form name="checkForm">
+                        <div class="form-row">
+                            
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Unique ID <span style="color:red;"> *</span></label>
+                                <input type="text" class="form-control" name="uniqueidEmployee" id="uniqueidEmployee"
+                                    ng-model="uniqueidEmployee" ng-required=true>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" ng-disabled="checkForm.$invalid" ng-click="check(uniqueidEmployee)">Check</button>
+                    </form>
+
                 </div>
-            </a>
-        </nav>
-        <div class="container-fluid " ng-app='IndexApp'>
-            <div class="container ">
-                <div class="row mt-3">
-                    <div class="col-12 bg-light  p-3">
-                        <h6 class="mt-4">Kiểm tra thông tin nhân viên/Check employee infomation</h6>
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Công ty/Company</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Mã nhân viên/ Employee ID</label>
-                                    <input type="text" class="form-control" id="inputPassword4">
-                                </div>
+                <div class="col-12 bg-light mt-3 p-3" id="inputform">
+                    <h6 class="mt-4">Thông tin nhân viên/Employee Information</h6>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Họ và tên/Full Name</label>
+                                <input type="text" class="form-control" id="inputPassword4" ng-model="fullname"
+                                    disabled>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Bộ phận/ Department</label>
+                                <input type="text" class="form-control" id="inputPassword4" ng-model="departmnet" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Địa chỉ/ Address</label>
+                                <input type="text" class="form-control" id="inputPassword4" ng-model="address"
+                                    disabled>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Công ty/Company</label>
+                                <input type="text" class="form-control" id="inputPassword4" ng-model="idCompany"
+                                    disabled>
+                            </div>
+                           
+                        </div>
+                    </form>
+                    <h6 class="mt-4">Thông tin lịch trình di chuyển/Move declaration </h6>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Tỉnh thành/Province</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Check</button>
-                        </form>
-
-                    </div>
-                    <div class="col-12 bg-light mt-3 p-3">
-                        <h6 class="mt-4">Thông tin nhân viên/Employee Information</h6>
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Họ và tên/Full Name</label>
-                                    <input type="text" class="form-control" id="inputPassword4" value="Nguyen Van A"
-                                        disabled>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Bộ phận/ Department</label>
-                                    <input type="text" class="form-control" id="inputPassword4" disabled>
-                                </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Từ ngày/ Date from</label>
+                                <input type="date" class="form-control" id="inputPassword4" value="Nguyen Van A">
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Địa chỉ/ Address</label>
-                                    <input type="text" class="form-control" id="inputPassword4" value="Nguyen Van A"
-                                        disabled>
-                                </div>
 
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Đến ngày/Date to</label>
+                                <input type="date" class="form-control" id="inputPassword4" value="Nguyen Van A">
                             </div>
-                        </form>
-                        <h6 class="mt-4">Thông tin lịch trình duy chuyển/Move declaration </h6>
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Tỉnh thành/Province</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
 
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Từ ngày/ Date from</label>
-                                    <input type="date" class="form-control" id="inputPassword4"
-                                        value="Nguyen Van A">
-                                </div>
-
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Đến ngày/Date to</label>
-                                    <input type="date" class="form-control" id="inputPassword4"
-                                        value="Nguyen Van A">
-                                </div>
-
-                            </div>
-                            <button type="submit" class="btn btn-success">Submit</button>
-                        </form>
-                    </div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -112,7 +105,8 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
     <script src="js/angularjs/angular.min.js"></script>
-    <script src="js/angularjs/index.js"></script>
+    <script src="/js/angularjs/indexController.js"></script>
+
 </body>
 
 </html>
