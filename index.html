@@ -24,20 +24,35 @@
                     <h6 class="mt-4">Kiểm tra thông tin nhân viên/Check employee infomation</h6>
                     <form name="checkForm">
                         <div class="form-row">
-
                             <div class="form-group col-md-6">
-                                <label for="inputPassword4">Unique ID <span style="color:red;"> *</span></label>
-                                <input type="text" class="form-control" name="uniqueidEmployee" id="uniqueidEmployee"
-                                    ng-model="uniqueidEmployee" ng-required=true>
+                                <label for="idCompany">Công ty / Company<span style="color:red;"> *</span></label>
+                                <select id="idCompany" class="form-control" name="idCompany" id="idCompany"
+                                    ng-model="idCompany" ng-required="true">
+                                    <option ng-repeat="x in Companys | orderBy: 'idCompany'" value="{{x.idCompany}}">
+                                        {{x.nameCompany}}</option>
+                                </select>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="empcodeEmployee">Mã Nhân Viên / Employee Code<span style="color:red;"> *</span></label>
+                                <input type="text" class="form-control" name="empcodeEmployee" id="empcodeEmployee"
+                                    ng-model="empcodeEmployee" ng-required=true>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Mã Thẻ Xe hoặc Mã Thẻ Phiếu Ăn<span style="color:red;"> *</span></label>
+                                <input type="text" class="form-control" name="smcEmployee" id="smcEmployee"
+                                    ng-model="smcEmployee" ng-required=true>
+                            </div>
+                        </div>
+                        
 
                         <button type="submit" class="btn btn-primary" ng-disabled="checkForm.$invalid"
-                            ng-click="check(uniqueidEmployee)">Check</button>
+                            ng-click="check(idCompany,empcodeEmployee,smcEmployee)">Kiểm tra / Check</button>
                     </form>
 
                 </div>
-                <div class="col-12 bg-light mt-3 p-3" id="inputform">
+                <!-- <div class="col-12 bg-light mt-3 p-3" id="inputform">
                     <h6 class="mt-4">Thông tin nhân viên/Employee Information</h6>
                     <form>
                         <div class="form-row">
@@ -95,42 +110,8 @@
                         <button type="submit" ng-disabled="declarationForm.$invalid" class="btn btn-success"
                             ng-click="submitform(idProvince,datestart,dateend)">Add</button>
                     </form>
-                </div>
-                <div class="col-12 bg-light mt-3 p-3" id="table">
-                    <h6 class="mt-4">Lịch trình chi tiết/Detail</h6>
-                    <table class="table table-bordered">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Tỉnh thành/Province</th>
-                                <th scope="col">Từ ngày/Date from</th>
-                                <th scope="col">Đến ngày/Date to</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-light">
-                            <!-- <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><button type="button" class="close" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button></td>
-                            </tr> -->
-
-                            <tr ng-repeat="x in movieArray">
-                                <td><label>{{$index + 1}}</label></td>
-                                <td><label>{{movies.name}}</label></td>
-                                <td><label>{{movies.director}}</label></td>
-                                <td><input type="checkbox" ng-model="movies.Remove"/></td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <button type="button" class="btn btn-success mt-2" ng-click="submittable()">Submit</button>
-                </div>
+                </div> -->
+                
             </div>
         </div>
     </div>
