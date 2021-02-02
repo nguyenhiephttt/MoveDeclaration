@@ -24,7 +24,7 @@ app.controller('indexCtrl', function ($scope, $http) {
                 alert("Does not exist");
             }
             else {
-                alert("ok");
+                window.location.assign('http://127.0.0.1:5500/view/medicaldeclaration.html?em='+ empcodeEmployee);
             }
         }, function myError(response) {
             $scope.employee = response.statusText;
