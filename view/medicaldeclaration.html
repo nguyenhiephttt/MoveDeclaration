@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Move declaration</title>
 </head>
 
@@ -26,7 +27,7 @@
 
                 <div class="col-12 bg-light mt-3 p-3">
                     <h6 class="mt-4">Thông tin nhân viên/Employee Information</h6>
-                    <form>
+                    <form class="css-form">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="">Họ và tên/Full Name</label>
@@ -61,12 +62,14 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Điện thoại/ Phone</label>
-                                <input type="number" class="form-control" id="phoneEmployee" ng-model="phoneEmployee" ng-required="true" >
+                                <input type="number" class="form-control" id="phoneEmployee" ng-model="phoneEmployee"
+                                    >
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="inputPassword4">Địa chỉ nơi ở tại Việt Nam/ Residential Address in
                                     VietNam</label>
-                                <input type="text" class="form-control" id="addressEmployee" ng-model="addressEmployee" ng-required="true">
+                                <input type="text" class="form-control" id="addressEmployee" ng-model="addressEmployee"
+                                    >
                             </div>
 
                         </div>
@@ -74,29 +77,84 @@
 
                 </div>
                 <div class="col-12 bg-light mt-3 p-3">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-7">
-                                <label>
-                                    <h6>Trong vòng 14 ngày qua, Anh/chị có đến quốc gia vùng lãnh thổ nào không?</h6>
-                                </label>
-                                <label>In the past 14 days, have you visited any other city/ provinces?</label>
-
-                            </div>
-                            <div class="form-group col-md-5">
-                                <div class="form-group col-md-6">
-                                    <select id="QUESTION1" class="form-control" name="QUESTION1" id="QUESTION1"
-                                        ng-change="choosequestion1(QUESTION1)" ng-model="QUESTION1">
-                                        <option value="1">Có / Yes</option>
-                                        <option value="0">Không / No</option>
-                                    </select>
-                                </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-7">
+                            <label>
+                                <h6>Trong vòng 14 ngày qua, Anh/chị có đến quốc gia vùng lãnh thổ nào không?</h6>
+                            </label>
+                            <label>In the past 14 days, have you visited any other city/ provinces?</label>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <div class="form-group col-md-6">
+                                <select id="QUESTION1" class="form-control" name="QUESTION1" id="QUESTION1"
+                                    ng-change="choosequestion1(QUESTION1)" ng-model="QUESTION1">
+                                    <option value="1">Có / Yes</option>
+                                    <option value="0">Không / No</option>
+                                </select>
                             </div>
                         </div>
+                    </div>
+                    <div id="formkhaibao">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <h6>Liệt kê tất cả các Thành phố hoặc Tỉnh mà Anh/Chị đã đến</h6>
+                                <label>List down all the Cities or Province that you plan to visit/visied during your
+                                    leave</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Ngày Khởi Hành (Departue date)</label>
+                                <input type="date" class="form-control" id="ngaykhoihanh" ng-model="ngaykhoihanh">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Địa điểm khởi hành (Departue location)</label>
+                                <select class="form-control" name="diadiemkhoihanh" id="diadiemkhoihanh"
+                                    ng-model="diadiemkhoihanh">
+                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
+                                        value="{{x.nameProvince}}">
+                                        {{x.nameProvince}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Ngày đến (Arrival date)</label>
+                                <input type="date" class="form-control" id="ngayden" ng-model="ngayden">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Nơi đến (Arrival Destination)</label>
+                                <select class="form-control" name="noiden" id="noiden" ng-model="noiden">
+                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
+                                        value="{{x.nameProvince}}">
+                                        {{x.nameProvince}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Phương tiện di chuyển (Mode of Transport)</label>
+                                <select class="form-control" name="phuongtiendichuyen" id="phuongtiendichuyen"
+                                    ng-model="phuongtiendichuyen">
+                                    <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
+                                        value="{{x.nameTranposition}}">
+                                        {{x.nameTranposition}}</option>
+                                </select> </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Số chỗ ngồi (Seat No.)</label>
+                                <input type="text" class="form-control" id="chongoi" ng-model="chongoi"
+                                    ng-required="true">
+                            </div>
+                            <div class="form-row col-md-12">
+                                <div class="form-group col-md-6 ">
+                                    <button type="button" class="btn btn-primary mb-2"
+                                        ng-click="addtotable(ngaykhoihanh,diadiemkhoihanh,ngayden,noiden,phuongtiendichuyen)">Thêm
+                                        vào
+                                        lịch trình / Add to table declaration</button>
+                                </div>
+                                <div class="form-group col-md-6 ">
+                                    <label>Số lần đã nhập / Number of entered : <span
+                                            style="color:red;">{{solannhap}}</span></label>
+                                </div>
+                            </div>
+
+                        </div>
                         <div id="tabledeclaration">
-                            <h6>Liệt kê tất cả các Thành phố hoặc Tỉnh mà Anh/Chị đã đến</h6>
-                            <label>List down all the Cities or Province that you plan to visit/visied during your
-                                leave</label>
+
                             <div class="table-responsive">
                                 <table class="table table-bordered ">
                                     <thead class="thead-dark">
@@ -110,485 +168,412 @@
                                             <th scope="col">Phương tiện di chuyển<br><small>(Mode of Transport)</small>
                                             </th>
                                             <th scope="col">Số chổ ngồi <br><small>(Seat No.)</small> </th>
+                                            <!-- <th scope="col" ng-click="removeall()"><button btn btn-primary>Xóa </button></th> -->
                                         </tr>
                                     </thead>
                                     <tbody class="bg-light">
                                         <tr class="bg-light">
                                             <td><label>1</label></td>
                                             <td>
-                                                <input type="date" class="form-control " id="DEPADATE1"
-                                                    ng-model="DEPADATE1">
+                                                <input type="text" class="form-control " id="DEPADATE1"
+                                                    ng-model="DEPADATE1" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <select class="form-control" name="DEPALOCA1" id="DEPALOCA1"
-                                                    ng-model="DEPALOCA1">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="DEPALOCA1"
+                                                    ng-model="DEPALOCA1" disabled>
                                             </td>
                                             <td>
-                                                <input type="date" class="form-control " id="ARRIDATE1"
-                                                    ng-model="ARRIDATE1">
+                                                <input type="text" class="form-control " id="ARRIDATE1"
+                                                    ng-model="ARRIDATE1" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name=" " id="ARRILOCA1"
-                                                    ng-model="ARRILOCA1">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="ARRILOCA1"
+                                                    ng-model="ARRILOCA1" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="MODETRANS1" id="MODETRANS1"
-                                                    ng-model="MODETRANS1">
-                                                    <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
-                                                        value="{{x.nameTranposition}}">
-                                                        {{x.nameTranposition}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="MODETRANS1"
+                                                    ng-model="MODETRANS1" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" id="SEATNO1" ng-model="SEATNO1">
+                                                <input type="text" class="form-control" id="SEATNO1" ng-model="SEATNO1"
+                                                    disabled>
                                             </td>
+                                            <!-- <td><button class="btn btn-success"
+                                                    ng-click="xoadong1()">Xóa/Remove</button></td> -->
                                         </tr>
                                         <tr class="bg-light">
                                             <td><label>2</label></td>
                                             <td>
-                                                <input type="date" class="form-control " id="DEPADATE2"
-                                                    ng-model="DEPADATE2">
+                                                <input type="text" class="form-control " id="DEPADATE2"
+                                                    ng-model="DEPADATE2" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <select class="form-control" name="DEPALOCA2" id="DEPALOCA2"
-                                                    ng-model="DEPALOCA2">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="DEPALOCA2"
+                                                    ng-model="DEPALOCA2" disabled>
                                             </td>
                                             <td>
-                                                <input type="date" class="form-control " id="ARRIDATE2"
-                                                    ng-model="ARRIDATE2">
+                                                <input type="text" class="form-control " id="ARRIDATE2"
+                                                    ng-model="ARRIDATE2" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="ARRILOCA2" id="ARRILOCA2"
-                                                    ng-model="ARRILOCA2">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="ARRILOCA2"
+                                                    ng-model="ARRILOCA2" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="MODETRANS2" id="MODETRANS2"
-                                                    ng-model="MODETRANS2">
-                                                    <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
-                                                        value="{{x.nameTranposition}}">
-                                                        {{x.nameTranposition}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="MODETRANS2"
+                                                    ng-model="MODETRANS2" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" id="SEATNO2" ng-model="SEATNO2">
+                                                <input type="text" class="form-control" id="SEATNO2" ng-model="SEATNO2"
+                                                    disabled>
                                             </td>
+                                            <!-- <td><button class="btn btn-success"
+                                                    ng-click="xoadong2()">Xóa/Remove</button></td> -->
                                         </tr>
                                         <tr class="bg-light">
                                             <td><label>3</label></td>
                                             <td>
-                                                <input type="date" class="form-control " id="DEPADATE3"
-                                                    ng-model="DEPADATE3">
+                                                <input type="text" class="form-control " id="DEPADATE3"
+                                                    ng-model="DEPADATE3" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <select class="form-control" name="DEPALOCA3" id="DEPALOCA3"
-                                                    ng-model="DEPALOCA3">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="DEPALOCA3"
+                                                    ng-model="DEPALOCA3" disabled>
                                             </td>
                                             <td>
-                                                <input type="date" class="form-control " id="ARRIDATE3"
-                                                    ng-model="ARRIDATE3">
+                                                <input type="text" class="form-control " id="ARRIDATE3"
+                                                    ng-model="ARRIDATE3" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="ARRILOCA3" id="ARRILOCA3"
-                                                    ng-model="ARRILOCA3">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="ARRILOCA3"
+                                                    ng-model="ARRILOCA3" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="MODETRANS3" id="MODETRANS3"
-                                                    ng-model="MODETRANS3">
-                                                    <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
-                                                        value="{{x.nameTranposition}}">
-                                                        {{x.nameTranposition}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="MODETRANS3"
+                                                    ng-model="MODETRANS3" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" id="SEATNO3" ng-model="SEATNO3">
+                                                <input type="text" class="form-control" id="SEATNO3" ng-model="SEATNO3"
+                                                    disabled>
                                             </td>
+                                            <!-- <td><button class="btn btn-success"
+                                                    ng-click="xoadong3()">Xóa/Remove</button></td> -->
                                         </tr>
                                         <tr class="bg-light">
                                             <td><label>4</label></td>
                                             <td>
-                                                <input type="date" class="form-control " id="DEPADATE4"
-                                                    ng-model="DEPADATE4">
+                                                <input type="text" class="form-control " id="DEPADATE4"
+                                                    ng-model="DEPADATE4" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <select class="form-control" name="DEPALOCA4" id="DEPALOCA4"
-                                                    ng-model="DEPALOCA4">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="DEPALOCA4"
+                                                    ng-model="DEPALOCA4" disabled>
                                             </td>
                                             <td>
-                                                <input type="date" class="form-control " id="ARRIDATE4"
-                                                    ng-model="ARRIDATE4">
+                                                <input type="text" class="form-control " id="ARRIDATE4"
+                                                    ng-model="ARRIDATE4" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="ARRILOCA4" id="ARRILOCA4"
-                                                    ng-model="ARRILOCA4">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="ARRILOCA4"
+                                                    ng-model="ARRILOCA4" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="MODETRANS4" id="MODETRANS4"
-                                                    ng-model="MODETRANS4">
-                                                    <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
-                                                        value="{{x.nameTranposition}}">
-                                                        {{x.nameTranposition}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="MODETRANS4"
+                                                    ng-model="MODETRANS4" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" id="SEATNO4" ng-model="SEATNO2">
+                                                <input type="text" class="form-control" id="SEATNO4" ng-model="SEATNO4"
+                                                    disabled>
                                             </td>
+                                            <!-- <td><button class="btn btn-success"
+                                                    ng-click="xoadong4()">Xóa/Remove</button></td> -->
                                         </tr>
                                         <tr class="bg-light">
                                             <td><label>5</label></td>
                                             <td>
-                                                <input type="date" class="form-control " id="DEPADATE5"
-                                                    ng-model="DEPADATE5">
+                                                <input type="text" class="form-control " id="DEPADATE5"
+                                                    ng-model="DEPADATE5" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <select class="form-control" name="DEPALOCA5" id="DEPALOCA5"
-                                                    ng-model="DEPALOCA5">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="DEPALOCA5"
+                                                    ng-model="DEPALOCA5" disabled>
                                             </td>
                                             <td>
-                                                <input type="date" class="form-control " id="ARRIDATE5"
-                                                    ng-model="ARRIDATE5">
+                                                <input type="text" class="form-control " id="ARRIDATE5"
+                                                    ng-model="ARRIDATE5" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="ARRILOCA5" id="ARRILOCA5"
-                                                    ng-model="ARRILOCA5">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="ARRILOCA5"
+                                                    ng-model="ARRILOCA5" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="MODETRANS5" id="MODETRANS5"
-                                                    ng-model="MODETRANS5">
-                                                    <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
-                                                        value="{{x.nameTranposition}}">
-                                                        {{x.nameTranposition}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="MODETRANS5"
+                                                    ng-model="MODETRANS5" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" id="SEATNO5" ng-model="SEATNO5">
+                                                <input type="text" class="form-control" id="SEATNO5" ng-model="SEATNO5"
+                                                    disabled>
                                             </td>
+                                            <!-- <td><button class="btn btn-success"
+                                                    ng-click="xoadong5()">Xóa/Remove</button></td> -->
                                         </tr>
                                         <tr class="bg-light">
                                             <td><label>6</label></td>
                                             <td>
-                                                <input type="date" class="form-control " id="DEPADATE6"
-                                                    ng-model="DEPADATE6">
+                                                <input type="text" class="form-control " id="DEPADATE6"
+                                                    ng-model="DEPADATE6" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <select class="form-control" name="DEPALOCA6" id="DEPALOCA6"
-                                                    ng-model="DEPALOCA6">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="DEPALOCA6"
+                                                    ng-model="DEPALOCA6" disabled>
                                             </td>
                                             <td>
-                                                <input type="date" class="form-control " id="ARRIDATE6"
-                                                    ng-model="ARRIDATE6">
+                                                <input type="text" class="form-control " id="ARRIDATE6"
+                                                    ng-model="ARRIDATE6" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="ARRILOCA6" id="ARRILOCA6"
-                                                    ng-model="ARRILOCA6">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="ARRILOCA6"
+                                                    ng-model="ARRILOCA6" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="MODETRANS6" id="MODETRANS6"
-                                                    ng-model="MODETRANS6">
-                                                    <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
-                                                        value="{{x.nameTranposition}}">
-                                                        {{x.nameTranposition}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="MODETRANS6"
+                                                    ng-model="MODETRANS6" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" id="SEATNO6" ng-model="SEATNO6">
+                                                <input type="text" class="form-control" id="SEATNO6" ng-model="SEATNO6"
+                                                    disabled>
                                             </td>
+                                            <!-- <td><button class="btn btn-success"
+                                                    ng-click="xoadong6()">Xóa/Remove</button></td> -->
                                         </tr>
                                         <tr class="bg-light">
                                             <td><label>7</label></td>
                                             <td>
-                                                <input type="date" class="form-control " id="DEPADATE7"
-                                                    ng-model="DEPADATE7">
+                                                <input type="text" class="form-control " id="DEPADATE7"
+                                                    ng-model="DEPADATE7" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <select class="form-control" name="DEPALOCA7" id="DEPALOCA7"
-                                                    ng-model="DEPALOCA7">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="DEPALOCA7"
+                                                    ng-model="DEPALOCA7" disabled>
                                             </td>
                                             <td>
-                                                <input type="date" class="form-control " id="ARRIDATE7"
-                                                    ng-model="ARRIDATE7">
+                                                <input type="text" class="form-control " id="ARRIDATE7"
+                                                    ng-model="ARRIDATE7" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="ARRILOCA7" id="ARRILOCA7"
-                                                    ng-model="ARRILOCA7">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="ARRILOCA7"
+                                                    ng-model="ARRILOCA7" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="MODETRANS7" id="MODETRANS7"
-                                                    ng-model="MODETRANS7">
-                                                    <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
-                                                        value="{{x.nameTranposition}}">
-                                                        {{x.nameTranposition}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="MODETRANS7"
+                                                    ng-model="MODETRANS7" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" id="SEATNO7" ng-model="SEATNO7">
+                                                <input type="text" class="form-control" id="SEATNO7" ng-model="SEATNO7"
+                                                    disabled>
                                             </td>
+                                            <!-- <td><button class="btn btn-success"
+                                                    ng-click="xoadong7()">Xóa/Remove</button></td> -->
                                         </tr>
                                         <tr class="bg-light">
                                             <td><label>8</label></td>
                                             <td>
-                                                <input type="date" class="form-control " id="DEPADATE8"
-                                                    ng-model="DEPADATE8">
+                                                <input type="text" class="form-control " id="DEPADATE8"
+                                                    ng-model="DEPADATE8" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <select class="form-control" name="DEPALOCA8" id="DEPALOCA8"
-                                                    ng-model="DEPALOCA8">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="DEPALOCA8"
+                                                    ng-model="DEPALOCA8" disabled>
                                             </td>
                                             <td>
-                                                <input type="date" class="form-control " id="ARRIDATE8"
-                                                    ng-model="ARRIDATE8">
+                                                <input type="text" class="form-control " id="ARRIDATE8"
+                                                    ng-model="ARRIDATE8" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="ARRILOCA8" id="ARRILOCA8"
-                                                    ng-model="ARRILOCA8">
-                                                    <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
-                                                        value="{{x.nameProvince}}">
-                                                        {{x.nameProvince}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="ARRILOCA8"
+                                                    ng-model="ARRILOCA8" disabled>
                                             </td>
                                             <td>
-                                                <select class="form-control" name="MODETRANS8" id="MODETRANS8"
-                                                    ng-model="MODETRANS8">
-                                                    <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
-                                                        value="{{x.nameTranposition}}">
-                                                        {{x.nameTranposition}}</option>
-                                                </select>
+                                                <input type="text" class="form-control " id="MODETRANS8"
+                                                    ng-model="MODETRANS8" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" id="SEATNO8" ng-model="SEATNO8">
+                                                <input type="text" class="form-control" id="SEATNO8" ng-model="SEATNO8"
+                                                    disabled>
                                             </td>
+                                            <!-- <td><button class="btn btn-success"
+                                                    ng-click="xoadong8()">Xóa/Remove</button></td> -->
                                         </tr>
                                     </tbody>
                                 </table>
+                                <button type="button" class="btn btn-primary" ng-click="removeall()">Xóa tất cả lịch trình / Remove All declaration</button>
                             </div>
                         </div>
-                        <div>
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label>
-                                        <h6>Trong vòng 14 ngày(Tính từ thời điểm rời khỏi nơi ở) Anh/Chị có thấy xuất
-                                            hiện dấu hiệu nào sau đây không?</h6>
-                                    </label>
+                    </div>
+                </div>
+                <div class="col-12 bg-light mt-3 p-3">
+                    <div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>
+                                    <h6>Trong vòng 14 ngày(Tính từ thời điểm rời khỏi nơi ở) Anh/Chị có thấy xuất
+                                        hiện dấu hiệu nào sau đây không?</h6>
+                                </label>
 
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label>14 days(up to the time of proceduures for exit) Do yoy see any of the
-                                        following symptoms?</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <h4>Triệu chứng (Sympton)</h4>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <h4>Có / Không (Yes / No)</h4>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Sốt (Fever)</label>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select id="QUESTIONFEVER" class="form-control" name="QUESTIONFEVER" id="QUESTIONFEVER"
-                                    ng-change="choosequestionfever(QUESTIONFEVER)" ng-model="QUESTIONFEVER">
-                                    <option value="1">Có / Yes</option>
-                                    <option value="0">Không / No</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Ho (Cough)</label>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select id="QUESTIONCOUGH" class="form-control" name="QUESTIONCOUGH" id="QUESTIONCOUGH"
-                                    ng-change="choosequestioncough(QUESTIONCOUGH)" ng-model="QUESTIONCOUGH">
-                                    <option value="1">Có / Yes</option>
-                                    <option value="0">Không / No</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Khó thở (Shortness of breath)</label>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select id="QUESTIONBREATH" class="form-control" name="QUESTIONBREATH"
-                                    id="QUESTIONBREATH" ng-change="choosequestionbreath(QUESTIONBREATH)"
-                                    ng-model="QUESTIONBREATH">
-                                    <option value="1">Có / Yes</option>
-                                    <option value="0">Không / No</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Đau họng (Sore throat)</label>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select id="QUESTIONTHROAT" class="form-control" name="QUESTIONTHROAT"
-                                    id="QUESTIONTHROAT" ng-change="choosequestionthroat(QUESTIONTHROAT)"
-                                    ng-model="QUESTIONTHROAT">
-                                    <option value="1">Có / Yes</option>
-                                    <option value="0">Không / No</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Nôn / buồn nôn ( Vomit/ Nausea )</label>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select id="QUESTIONNAUSEA" class="form-control" name="QUESTIONNAUSEA"
-                                    id="QUESTIONNAUSEA" ng-change="choosequestionnausea(QUESTIONNAUSEA)"
-                                    ng-model="QUESTIONNAUSEA">
-                                    <option value="1">Có / Yes</option>
-                                    <option value="0">Không / No</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Tiêu chảy ( Diarrhoea )</label>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select id="QUESTIONDIARR" class="form-control" name="QUESTIONDIARR" id="QUESTIONDIARR"
-                                    ng-change="choosequestiondiarr(QUESTIONDIARR)" ng-model="QUESTIONDIARR">
-                                    <option value="1">Có / Yes</option>
-                                    <option value="0">Không / No</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Xuất huyết ngoài da ( Skin bleeding )</label>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select id="QUESTIONBLEEDING" class="form-control" name="QUESTIONBLEEDING"
-                                    id="QUESTIONBLEEDING" ng-change="choosequestionbleeding(QUESTIONBLEEDING)"
-                                    ng-model="QUESTIONBLEEDING">
-                                    <option value="1">Có / Yes</option>
-                                    <option value="0">Không / No</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Nổi ban ngoài da ( Skin rashes )</label>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select id="QUESTIONRASHES" class="form-control" name="QUESTIONRASHES"
-                                    id="QUESTIONRASHES" ng-change="choosequestionrashes(QUESTIONRASHES)"
-                                    ng-model="QUESTIONRASHES">
-                                    <option value="1">Có / Yes</option>
-                                    <option value="0">Không / No</option>
-                                </select>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label>
-                                    <h6>Lịch sử phơi nhiễm: Trong 14 ngày qua, Anh/Chị có?</h6>
-                                </label>
-                                <label>Exposure history: In the past 14 days, did you have?</label>
+                                <label>14 days(up to the time of proceduures for exit) Do yoy see any of the
+                                    following symptoms?</label>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-7">
-                                <label>
-                                    <h6>Trực tiếp chăm sóc người bệnh truyền nhiễm</h6>
-                                </label>
-                                <label>Directly take care of infected people</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <h4>Triệu chứng (Sympton)</h4>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h4>Có / Không (Yes / No)</h4>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Sốt (Fever)</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select id="QUESTIONFEVER" class="form-control" name="QUESTIONFEVER" id="QUESTIONFEVER"
+                                ng-change="choosequestionfever(QUESTIONFEVER)" ng-model="QUESTIONFEVER">
+                                <option value="1">Có / Yes</option>
+                                <option value="0">Không / No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Ho (Cough)</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select id="QUESTIONCOUGH" class="form-control" name="QUESTIONCOUGH" id="QUESTIONCOUGH"
+                                ng-change="choosequestioncough(QUESTIONCOUGH)" ng-model="QUESTIONCOUGH">
+                                <option value="1">Có / Yes</option>
+                                <option value="0">Không / No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Khó thở (Shortness of breath)</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select id="QUESTIONBREATH" class="form-control" name="QUESTIONBREATH" id="QUESTIONBREATH"
+                                ng-change="choosequestionbreath(QUESTIONBREATH)" ng-model="QUESTIONBREATH">
+                                <option value="1">Có / Yes</option>
+                                <option value="0">Không / No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Đau họng (Sore throat)</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select id="QUESTIONTHROAT" class="form-control" name="QUESTIONTHROAT" id="QUESTIONTHROAT"
+                                ng-change="choosequestionthroat(QUESTIONTHROAT)" ng-model="QUESTIONTHROAT">
+                                <option value="1">Có / Yes</option>
+                                <option value="0">Không / No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Nôn / buồn nôn ( Vomit/ Nausea )</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select id="QUESTIONNAUSEA" class="form-control" name="QUESTIONNAUSEA" id="QUESTIONNAUSEA"
+                                ng-change="choosequestionnausea(QUESTIONNAUSEA)" ng-model="QUESTIONNAUSEA">
+                                <option value="1">Có / Yes</option>
+                                <option value="0">Không / No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Tiêu chảy ( Diarrhoea )</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select id="QUESTIONDIARR" class="form-control" name="QUESTIONDIARR" id="QUESTIONDIARR"
+                                ng-change="choosequestiondiarr(QUESTIONDIARR)" ng-model="QUESTIONDIARR">
+                                <option value="1">Có / Yes</option>
+                                <option value="0">Không / No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Xuất huyết ngoài da ( Skin bleeding )</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select id="QUESTIONBLEEDING" class="form-control" name="QUESTIONBLEEDING"
+                                id="QUESTIONBLEEDING" ng-change="choosequestionbleeding(QUESTIONBLEEDING)"
+                                ng-model="QUESTIONBLEEDING">
+                                <option value="1">Có / Yes</option>
+                                <option value="0">Không / No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Nổi ban ngoài da ( Skin rashes )</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select id="QUESTIONRASHES" class="form-control" name="QUESTIONRASHES" id="QUESTIONRASHES"
+                                ng-change="choosequestionrashes(QUESTIONRASHES)" ng-model="QUESTIONRASHES">
+                                <option value="1">Có / Yes</option>
+                                <option value="0">Không / No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>
+                                <h6>Lịch sử phơi nhiễm: Trong 14 ngày qua, Anh/Chị có?</h6>
+                            </label>
+                            <label>Exposure history: In the past 14 days, did you have?</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-7">
+                            <label>
+                                <h6>Trực tiếp chăm sóc người bệnh truyền nhiễm</h6>
+                            </label>
+                            <label>Directly take care of infected people</label>
 
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select id="QUESTION3" class="form-control" name="QUESTION3" id="QUESTION3"
-                                    ng-change="choosequestioncare(QUESTION3)" ng-model="QUESTION3">
-                                    <option value="1">Có / Yes</option>
-                                    <option value="0">Không / No</option>
-                                </select>
-                            </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault" style="color:red;">
-                                    Tôi cam kết những thông tin trên là đúng sự thật, tôi hiểu rằng nếu cung cấp sai
-                                    thông tin sẽ dẫn đến hậu quả nghiêm trọng./ I pledge that the above information
-                                    is true and I understand that providing false information may lead to serious
-                                    consequences
-                                </label>
-                            </div>
+                        <div class="form-group col-md-3">
+                            <select id="QUESTION3" class="form-control" name="QUESTION3" id="QUESTION3"
+                                ng-change="choosequestioncare(QUESTION3)" ng-model="QUESTION3">
+                                <option value="1">Có / Yes</option>
+                                <option value="0">Không / No</option>
+                            </select>
                         </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkcamket">
+                            <label class="form-check-label" for="flexCheckDefault" style="color:red;">
+                                Tôi cam kết những thông tin trên là đúng sự thật, tôi hiểu rằng nếu cung cấp sai
+                                thông tin sẽ dẫn đến hậu quả nghiêm trọng./ I pledge that the above information
+                                is true and I understand that providing false information may lead to serious
+                                consequences
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <button type="button" class="btn btn-success mt-2 float-right"
-                    ng-click="submitform(QUESTIONFEVER, QUESTIONCOUGH, QUESTIONBREATH, QUESTIONTHROAT, QUESTIONNAUSEA, QUESTIONDIARR, QUESTIONBLEEDING, QUESTIONRASHES,
-                    phoneEmployee, addressEmployee,
-                    SEATNO1, SEATNO2, SEATNO3, SEATNO4, SEATNO5, SEATNO6, SEATNO7, SEATNO8, QUESTION1,QUESTION3)">Gửi
+                <button type="button" class="btn btn-success mt-2 mb-2 float-right"  ng-click="submitform(QUESTIONFEVER, QUESTIONCOUGH, QUESTIONBREATH, QUESTIONTHROAT, QUESTIONNAUSEA, QUESTIONDIARR, QUESTIONBLEEDING, QUESTIONRASHES,
+                phoneEmployee, addressEmployee, QUESTION1, QUESTION3)">Gửi
                     / Submit</button>
-                </form>
+
             </div>
         </div>
     </div>

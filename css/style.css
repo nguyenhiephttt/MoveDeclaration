@@ -1,0 +1,27 @@
+.css-form input.ng-invalid.ng-touched {
+ 
+    outline:1px solid #f70000;
+}
+
+.css-form input.ng-valid.ng-touched {
+
+outline:2px solid green;
+}
+
+.css-form textarea.ng-invalid.ng-touched {
+
+outline:1px solid #f70000;
+}
+
+.css-form textarea.ng-valid.ng-touched {
+
+outline:2px solid green;
+}
+.css-form  select.ng-valid.ng-touched{
+    border: 2px solid green;
+    outline: none;
+  }
+  .css-form select.ng-invalid.ng-touched {
+ 
+    outline:1px solid #f70000;
+}
