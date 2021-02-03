@@ -6,7 +6,7 @@ app.controller('successCtrl', function ($scope, $http) {
     $http({
 
         method: "GET",
-        url: "http://192.168.2.12:8086/declaration/17"
+        url: "http://192.168.2.12:8086/declaration/1"
 
     }).then(function mySuccess(response) {
         console.log(response.data);
