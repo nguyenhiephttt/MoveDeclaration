@@ -19,9 +19,9 @@ app.controller('successCtrl', function ($scope, $http) {
         $scope.department=employeeData.employee.departmentEmployee;
         $scope.company=employeeData.employee.company.nameCompany;
         $scope.departmnet=employeeData.employee.departmentEmployee;
-        $scope.phone=employeeData.employee.dateofbirthEmployee;
-        $scope.nationality=employeeData.employee.nationalityEmployee;
         $scope.phone=employeeData.phoneEmployee;
+        $scope.nationality=employeeData.employee.nationalityEmployee;
+        $scope.dateofbrith=employeeData.employee.dateofbirthEmployee;
         $scope.address=employeeData.addressEmployee
         $scope.idEmployee=employeeData.employee.idEmployee;
         $scope.question1Employee=employeeData.question1Employee
