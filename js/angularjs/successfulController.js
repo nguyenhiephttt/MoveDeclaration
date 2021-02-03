@@ -6,11 +6,14 @@ app.controller('successCtrl', function ($scope, $http) {
     $http({
 
         method: "GET",
-        url: "http://192.168.2.12:8086/declaration/15"
+        url: "http://192.168.2.12:8086/declaration/17"
 
     }).then(function mySuccess(response) {
         console.log(response.data);
         employeeData = response.data;
+
+        $scope.controlnoEmployee=employeeData.controlnoEmployee;
+        $scope.decdateEmployee=employeeData.decdateEmployee;
 
         $scope.fullname = employeeData.employee.fullnameEmployee;
         $scope.department=employeeData.employee.departmentEmployee;
