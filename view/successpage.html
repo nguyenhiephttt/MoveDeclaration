@@ -6,95 +6,457 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Successful- Medical declaration</title>
 </head>
 
-<body>
-    <div class="row bg-primary">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-            <h4 class="text-light">Trang khai báo lịch trình di chuyển/ Move declaration</h4>
-        </div>
-    </div>
-    <div class="container-fluid ">
+<body ng-app="SuccessApp" ng-controller="successCtrl">
+
+    <div class="container-fluid">
         <div class="container ">
             <div class="row mt-3">
-                <div class="col-12 bg-light  p-3">
-                    <div class="alert alert-success" role="alert">
-                        <h4 class="alert-heading">Hoàn thành!/ Successfull!</h4>
-                        <hr>
-                        <p class="mb-0">Vui lòng kiểm tra lại thông tin. / Please, Check your information.</p>
-                    </div>
+                <div class="col-12 alert alert-danger p-3">
+                    <h4 class="text-center">Trang khai báo y tế đối với NLĐ sau thời gian nghỉ dài hạn</h4>
+                    <h3 class="text-center">MEDICAL DECLARATION</h3>
+                    <h5 class="mt-4 text-center">Đây là tài liệu quan trọng, thông tin của Anh/Chị sẽ giúp cơ quan y tế
+                        liên lạc khi cần thiết để phòng chống dịch bệnh truyền nhiễm</h5>
+                    <p class="text-center"> This is an important document, your information will help the health
+                        authorities in contacting when necessary to prevent infections diseases, please cooperate for
+                        your safety as well as everyone else </p>
+
                 </div>
-                <div class="col-12 bg-light mt-3 p-3">
-                    <h6 class="mt-4">Thông tin nhân viên/Employee Information</h6>
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">Họ và tên/Full Name</label>
-                                <label type="text" class="form-control">
-                                    <h6>Nguyễn Văn A</h6>
-                                </label>
+                <div class="alert alert-success col-12" role="alert">
+                    <h4 class="alert-heading">Hoàn Thành!/ Successful!</h4>
+                    <p></p>
+                    <hr>
+                    <p class="mb-0">Thông tin của Anh/Chị đã được lưu lại, Vui lòng kiểm tra lại thông tin/ Please,
+                        Check your information!</p>
+                </div>
+                <div class="col-12  alert alert-primary  mt-3 p-3" id="inputform">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h6 class="mt-4">Thông tin nhân viên/Employee Information</h6>
+                            </div>
+                            <div class="col-6">
+                                <h6 class="float-right"><i>Date:{{decdateEmployee}} </i><br><i>No.: {{controlnoEmployee}} </i></h6>
 
                             </div>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="form-row ">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Họ và tên/Full Name</label>
+                                <label type="text" class="form-control" id="inputPassword4">{{fullname}}</label>
+                            </div>
+
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Bộ phận/ Department</label>
-                                <label type="text" class="form-control">
-                                    <h6>MIS</h6>
-                                </label>
+                                <label type="text" class="form-control" id="inputPassword4"
+                                     >{{department}}</label>
                             </div>
                         </div>
                         <div class="form-row">
+
+
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Ngày khai báo/ Date Register</label>
-                                <label type="text" class="form-control">
-                                    <h6>01/02/2021</h6>
-                                </label>
+                                <label for="inputEmail4">Công ty/Company</label>
+                                <label type="text" class="form-control" id="inputPassword4">{{company}}</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Năm sinh/ Date of brith</label>
+                                <label type="date" class="form-control" id="inputPassword4">{{dateofbrith}}</label>
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Quốc tịch/ Nationality</label>
+                                <label type="text" class="form-control" id="inputPassword4">{{nationality}}</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Số hộ chiếu hoặc giấy CMND/passport No. or ID</label>
+                                <label type="text" class="form-control" id="inputPassword4">{{idEmployee}}</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Điện thoại/ Phone</label>
+                                <label type="text" class="form-control" id="inputPassword4">{{phone}}</label>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputPassword4">Địa chỉ nơi ở tại Việt Nam/ Residential address in
+                                    Vietnam</label>
+                                <label type="text" class="form-control" id="inputPassword4"
+                                     >{{address}}</label>
                             </div>
 
                         </div>
                     </form>
-                    <h6 class="mt-4">Thông tin lịch trình di chuyển/Move declaration </h6>
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">Tỉnh thành/Province</label>
-                                <label type="text" class="form-control">
-                                    <h6>Bình Dương</h6>
-                                </label>
-                            </div>
 
-                        </div>
+                </div>
+                <div class="col-12  alert alert-primary mt-3 p-3 mb-5 " id="table">
+                    <form action="">
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">Từ ngày/ Date from</label>
-                                <label type="text" class="form-control">
-                                    <h6>01/02/2021</h6>
+                            <div class="form-group col-md-7">
+                                <label>
+                                    <h6>Trong vòng 14 ngày qua, Anh/chị có đến quốc gia /vùng lãnh thổ nào không?</h6>
                                 </label>
-                            </div>
+                                <label>In the past 14 days, have you visited any other city/ provinces?</label>
 
+                            </div>
+                            <div class="form-group col-md-5">
+                                <div class="form-group col-md-6">
+                                    <label type="text" class="form-control" id="inputPassword4"  
+                                        disabled>{{question1Employee}}</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">Đến ngày/Date to</label>
-                                <label type="text" class="form-control">
-                                    <h6>01/02/2021</h6>
-                                </label>
+                        <div id="tableMove">
+                            <h6>Liệt kê tất cả các Thành phố hoặc Tỉnh mà Anh/Chị đã đến</h6>
+                        <label>List down all the Cities or Province that you plan to visit/visied during your
+                            leave</label>
+                        <div class="table-responsive-lg">
+                            <table class="table table-bordered ">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Ngày khởi hành <br><small>(Departue date)</small></th>
+                                        <th scope="col">Địa điểm khởi hành<br><small>(Departue location)</small></th>
+                                        <th scope="col">Ngày đến <br><small>(Arrival date)</small> </th>
+                                        <th scope="col">Nơi đến <br><small>(Arrival Destination)</small></th>
+                                        <th scope="col">Phương tiện di chuyển<br><small>(Mode of Transport)</small></th>
+                                        <th scope="col">Số chổ ngồi <br><small>(Seat No.)</small></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table table-bordered ">
+                                    <tr class="bg-light">
+                                        <td><label>1</label></td>
+                                        <td>
+                                            {{depdate1Employee}}
+                                        </td>
+                                        <td class="form-group ">
+                                            {{deplocal1Employee}}
+                                        </td>
+                                        <td>
+                                            {{arridate1Employee}}
+                                        </td>
+                                        <td>
+                                            {{arriloca1Employee}}
+                                        </td>
+                                        <td>
+                                            {{modetrans1Employee}}
+                                        </td>
+                                        <td>
+                                            {{seatno1Employee}}
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-light">
+                                        <td><label>2</label></td>
+                                        <td>
+                                            {{depdate2Employee}}
+                                        </td>
+                                        <td class="form-group ">
+                                            {{deplocal2Employee}}
+                                        </td>
+                                        <td>
+                                            {{arridate2Employee}}
+                                        </td>
+                                        <td>
+                                            {{arriloca2Employee}}
+                                        </td>
+                                        <td>
+                                            {{modetrans2Employee}}
+                                        </td>
+                                        <td>
+                                            {{seatno2Employee}}
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-light">
+                                        <td><label>3</label></td>
+                                        <td>
+                                            {{depdate3Employee}}
+                                        </td>
+                                        <td class="form-group ">
+                                            {{deplocal3Employee}}
+                                        </td>
+                                        <td>
+                                            {{arridate3Employee}}
+                                        </td>
+                                        <td>
+                                            {{arriloca3Employee}}
+                                        </td>
+                                        <td>
+                                            {{modetrans3Employee}}
+                                        </td>
+                                        <td>
+                                            {{seatno3Employee}}
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-light">
+                                        <td><label>4</label></td>
+                                        <td>
+                                            {{depdate4Employee}}
+                                        </td>
+                                        <td class="form-group ">
+                                            {{deplocal4Employee}}
+                                        </td>
+                                        <td>
+                                            {{arridate4Employee}}
+                                        </td>
+                                        <td>
+                                            {{arriloca4Employee}}
+                                        </td>
+                                        <td>
+                                            {{modetrans4Employee}}
+                                        </td>
+                                        <td>
+                                            {{seatno4Employee}}
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr class="bg-light">
+                                        <td><label>5</label></td>
+                                        <td>
+                                            {{depdate5Employee}}
+                                        </td>
+                                        <td class="form-group ">
+                                            {{deplocal5Employee}}
+                                        </td>
+                                        <td>
+                                            {{arridate5Employee}}
+                                        </td>
+                                        <td>
+                                            {{arriloca5Employee}}
+                                        </td>
+                                        <td>
+                                            {{modetrans5Employee}}
+                                        </td>
+                                        <td>
+                                            {{seatno5Employee}}
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-light">
+                                        <td><label>6</label></td>
+                                        <td>
+                                            {{depdate6Employee}}
+                                        </td>
+                                        <td class="form-group ">
+                                            {{deplocal6Employee}}
+                                        </td>
+                                        <td>
+                                            {{arridate6Employee}}
+                                        </td>
+                                        <td>
+                                            {{arriloca6Employee}}
+                                        </td>
+                                        <td>
+                                            {{modetrans6Employee}}
+                                        </td>
+                                        <td>
+                                            {{seatno6Employee}}
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-light">
+                                        <td><label>7</label></td>
+                                        <td>
+                                            {{depdate7Employee}}
+                                        </td>
+                                        <td class="form-group ">
+                                            {{deplocal7Employee}}
+                                        </td>
+                                        <td>
+                                            {{arridate7Employee}}
+                                        </td>
+                                        <td>
+                                            {{arriloca7Employee}}
+                                        </td>
+                                        <td>
+                                            {{modetrans7Employee}}
+                                        </td>
+                                        <td>
+                                            {{seatno7Employee}}
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-light">
+                                        <td><label>8</label></td>
+                                        <td>
+                                            {{depdate8Employee}}
+                                        </td>
+                                        <td class="form-group ">
+                                            {{deplocal8Employee}}
+                                        </td>
+                                        <td>
+                                            {{arridate8Employee}}
+                                        </td>
+                                        <td>
+                                            {{arriloca8Employee}}
+                                        </td>
+                                        <td>
+                                            {{modetrans8Employee}}
+                                        </td>
+                                        <td>
+                                            {{seatno8Employee}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                        <div>
+                            <div class="form-row">
+                                <div class="form-group col-md-7">
+                                    <label>
+                                        <h6>Trong vòng 14 ngày(Tính từ thời điểm rời khỏi nơi ở) Anh/Chị có thấy xuất
+                                            hiện dấu hiệu nào sau đây không?</h6>
+                                    </label>
+                                    <label>14 days(up to the time of proceduures for exit) Do you see any of the
+                                        following symptoms?</label>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-light table-bordered ">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Triệu chứng <br><small>(Sympton)</small></th>
+                                        <th scope="col">Có/Không <br><small>(Yes/No)</small></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sốt <small>Fever</small></td>
+                                        <td>
+                                            <div class="form-group col-md-8">
+                                                <div class="form-group col-md-6">
+                                                    <label type="text" class="form-control" id="inputPassword4"
+                                                          >{{fever}}</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ho <small>Cough</small></td>
+                                        <td>
+                                            <div class="form-group col-md-8">
+                                                <div class="form-group col-md-6">
+                                                    <label type="text" class="form-control  lbl-symptom" id="inputPassword4"
+                                                          disabled>{{cough}}</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Khó thở <small>Shortness of breath</small></td>
+                                        <td>
+                                            <div class="form-group col-md-8">
+                                                <div class="form-group col-md-6">
+                                                    <label type="text" class="form-control  lbl-symptom" id="inputPassword4"
+                                                      disabled>{{shortnessofbreath}}</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Đau họng <small>Sore throat</small></td>
+                                        <td>
+                                            <div class="form-group col-md-8">
+                                                <div class="form-group col-md-6">
+                                                    <label type="text" class="form-control  lbl-symptom" id="inputPassword4"
+                                                          disabled>{{sorethroat}}</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>Nôn/buồn nôn <small>Vomit/ Nausea</small></td>
+                                        <td>
+                                            <div class="form-group col-md-8">
+                                                <div class="form-group col-md-6">
+                                                    <label type="text" class="form-control  lbl-symptom" id="inputPassword4"
+                                                          disabled>{{vomitNausea}}</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tiêu chảy <small>Diarrhoea</small></td>
+                                        <td>
+                                            <div class="form-group col-md-8">
+                                                <div class="form-group col-md-6">
+                                                    <label type="text" class="form-control  lbl-symptom" id="inputPassword4"
+                                                          disabled>{{diarrhoea}}</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Xuất huyết ngoài da <small>Skin bleeding</small></td>
+                                        <td>
+                                            <div class="form-group col-md-8">
+                                                <div class="form-group col-md-6">
+                                                    <label type="text" class="form-control  lbl-symptom" id="inputPassword4"
+                                                          disabled>{{skinBleeding}}</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nổi ban ngoài da <small>Skin rashes</small> </td>
+                                        <td>
+                                            <div class="form-group col-md-8">
+                                                <div class="form-group col-md-6">
+                                                    <label type="text" class="form-control  lbl-symptom" id="inputPassword4"
+                                                          disabled>{{skinRashes}}</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="form-row">
+                                <div class="form-group col-md-7">
+                                    <label>
+                                        <h6>Lịch sử phơi nhiễm: Trong 14 ngày qua, Anh/Chị có?</h6>
+                                    </label>
+                                    <label>Exposure history: In the past 14 days, did you have?</label>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-row">
+                                <div class="form-group col-md-7">
+                                    <label>
+                                        <h6>Trực tiếp chăm sóc người bệnh truyền nhiễm/</h6>
+                                    </label>
+                                    <label>Directly take care of infected people</label>
+
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <div class="form-group col-md-6">
+                                        <label type="text" class="form-control" id="inputPassword4"
+                                              disabled>{{question3Employee}}</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            
         </div>
     </div>
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
+    <script src="../js/angularjs/angular.min.js"></script>
+    <script src="../js/angularjs/successfulController.js"></script>
+
 </body>
 
 </html>
