@@ -24,7 +24,7 @@ app.controller('indexCtrl', function ($scope, $http) {
                 alert("Không tồn tại nhân viên / Does not exist");
             }
             else {
-                window.location.assign('http://127.0.0.1:5500/view/medicaldeclaration.html?em='+ empcodeEmployee);
+                window.location.assign('http://192.168.2.12:91/view/medicaldeclaration.html?em='+ empcodeEmployee);
                 window.localStorage.setItem("empcode",empcodeEmployee);
             }
         }, function myError(response) {

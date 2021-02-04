@@ -1,13 +1,12 @@
 var app = angular.module('SuccessApp', []);
-app.run(['$rootScope', function ($rootScope) {
-    $rootScope.$on('$locationChangeStart', function (event) {
-       event.preventDefault();
-    });
-}]);
 app.controller('successCtrl', function ($scope, $http) {
 
+    
 
     var idcontro = location.search.split('contro=')[1];
+    if (idcontro == undefined) {
+        window.location.assign("http://192.168.2.12:91/index.html");
+    }
     // window.onbeforeunload = function() { return "Your work will be lost."; };
     $scope.$on('$locationChangeStart', function(event, next, current){
         event.preventDefault();            

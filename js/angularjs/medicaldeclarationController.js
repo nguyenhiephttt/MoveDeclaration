@@ -3,13 +3,13 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
 
     var idemp = location.search.split('em=')[1];
     if (idemp == undefined) {
-        window.location.assign("http://127.0.0.1:5500/index.html");
+        window.location.assign("http://192.168.2.12:91/index.html");
     }
     document.getElementById("formkhaibao").style.display = 'none';
-
+    document.getElementById("employeee").style.display = 'none';
     var checkemp = window.localStorage.getItem("empcode");
     if(checkemp == undefined){
-        window.location.assign("http://127.0.0.1:5500/index.html");
+        window.location.assign("http://192.168.2.12:91/index.html");
     }
     $http({
         method: "GET",
@@ -24,6 +24,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
             $scope.nationalityEmployee = item.nationalityEmployee;
             $scope.cmnd = item.idEmployee;
             $scope.idnhanvien = item.recidEmployee;
+            $scope.empcodeee = item.empcodeEmployee;
         })
     }, function myError(response) {
         $scope.employee = response.statusText;
@@ -364,9 +365,13 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
         var dateStr = year + "-" + month + "-" + date;
         // alert(dateStr);
         var checkcamket = document.getElementById("checkcamket").checked;
+        var reg = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
 
         if (phoneEmployee == undefined || addressEmployee == undefined) {
             alert("Vui lòng nhập đủ thông tin. / Please enter enough information.")
+        }
+        else if (reg.test(phoneEmployee) == false){
+            alert("Sai định dạng số điện thoại / Incorrect phone number format")
         }
         else if (QUESTION1 == 1 && $scope.solannhap == 0) {
             alert("Vui lòng khai báo lịch trình / Please declare the schedule");
@@ -517,7 +522,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
                         }).then(function mySuccess(response) {
                             $scope.declarationemp = response.data;
                             window.localStorage.removeItem("empcode");
-                            window.location.assign("http://127.0.0.1:5500/view/successpage.html?contro=" + $scope.declarationemp);
+                            window.location.assign("http://192.168.2.12:91/view/successpage.html?contro=" + $scope.declarationemp);
                         }, function myError(response) {
                             $scope.declarationemp = response.statusText;
                         });

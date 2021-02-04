@@ -24,7 +24,7 @@
                     <h5 class="mt-4 text-center">Đây là tài liệu quan trọng, thông tin của Anh/Chị sẽ giúp cơ quan y tế
                         liên lạc khi cần thiết để phòng chống dịch bệnh truyền nhiễm</h5>
                     <p class="text-center"> This is an important document, your information will help the health
-                        authorities in contacting when necessary to prevent infections diseases, please cooperate for
+                        authorities in contacting when necessary to prevent infectious diseases, please cooperate for
                         your safety as well as everyone else </p>
 
                 </div>
@@ -45,10 +45,15 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-6" id="employeee">
                                 <label for="">Mã Nhân Viên / ID Employee</label>
                                 <input type="text" class="form-control" id="idnhanvien"
                                     ng-model="idnhanvien" disabled>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Mã Nhân Viên / ID Employee</label>
+                                <input type="text" class="form-control" id="empcodeee"
+                                    ng-model="empcodeee" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="">Bộ phận/ Department</label>
@@ -71,7 +76,7 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Điện thoại/ Phone</label>
-                                <input type="number" class="form-control" id="phoneEmployee" ng-model="phoneEmployee"
+                                <input type="text" class="form-control" id="phoneEmployee" ng-model="phoneEmployee" 
                                     >
                             </div>
                             <div class="form-group col-md-12">
@@ -111,11 +116,11 @@
                                     leave</label>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="">Ngày Khởi Hành (Departue date)</label>
+                                <label for="">Ngày Khởi Hành (Departure date)</label>
                                 <input type="date" class="form-control" id="ngaykhoihanh" ng-model="ngaykhoihanh">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="">Địa điểm khởi hành (Departue location)</label>
+                                <label for="">Địa điểm khởi hành (Departure location)</label>
                                 <select class="form-control" name="diadiemkhoihanh" id="diadiemkhoihanh"
                                     ng-model="diadiemkhoihanh">
                                     <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
@@ -169,8 +174,8 @@
                                     <thead class="thead-dark">
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Ngày khởi hành <br><small>(Departue date)</small></th>
-                                            <th scope="col">Địa điểm khởi hành<br><small>(Departue location)</small>
+                                            <th scope="col">Ngày khởi hành <br><small>(Departure date)</small></th>
+                                            <th scope="col">Địa điểm khởi hành<br><small>(Departure location)</small>
                                             </th>
                                             <th scope="col">Ngày đến <br><small>(Arrival date)</small> </th>
                                             <th scope="col">Nơi đến <br><small>(Arrival Destination)</small></th>
@@ -433,14 +438,14 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label>14 days(up to the time of proceduures for exit) Do yoy see any of the
+                                <label>14 days(up to the time of procedures for exit) Do yoy see any of the
                                     following symptoms?</label>
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <h4>Triệu chứng (Sympton)</h4>
+                            <h4>Triệu chứng (Symptom)</h4>
                         </div>
                         <div class="form-group col-md-6">
                             <h4>Có / Không (Yes / No)</h4>
@@ -554,7 +559,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-7">
                             <label>
-                                <h6>Trực tiếp chăm sóc người bệnh truyền nhiễm</h6>
+                                <h6>Trực tiếp chăm sóc người bệnh truyền nhiễm / </h6>
                             </label>
                             <label>Directly take care of infected people</label>
 
