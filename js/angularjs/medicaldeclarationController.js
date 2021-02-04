@@ -2,7 +2,7 @@ var app = angular.module('declarationApp', []);
 app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
 
     var idemp = location.search.split('em=')[1];
-    if(idemp == undefined){
+    if (idemp == undefined) {
         window.location.assign("http://127.0.0.1:5500/index.html");
     }
     document.getElementById("formkhaibao").style.display = 'none';
@@ -19,7 +19,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
             $scope.dateofbirthEmployee = formatDate(item.dateofbirthEmployee);
             $scope.nationalityEmployee = item.nationalityEmployee;
             $scope.cmnd = item.idEmployee;
-            window.sessionStorage.setItem("recid", item.recidEmployee);
+            $scope.idnhanvien = item.recidEmployee;
         })
     }, function myError(response) {
         $scope.employee = response.statusText;
@@ -45,7 +45,8 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
         $scope.Provinces = response.statusText;
     });
 
-    var recid = window.sessionStorage.getItem("recid");
+    // var recid = $scope.idnhanvien;
+    // alert(recid);
     $scope.QUESTION1 = '0';
     $scope.choosequestion1 = function (QUESTION1) {
         $scope.QUESTION1 = QUESTION1;
@@ -349,7 +350,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
 
 
 
-    $scope.submitform = function (QUESTIONFEVER, QUESTIONCOUGH, QUESTIONBREATH, QUESTIONTHROAT, QUESTIONNAUSEA, QUESTIONDIARR, QUESTIONBLEEDING, QUESTIONRASHES,
+    $scope.submitform = function (idnhanvien,QUESTIONFEVER, QUESTIONCOUGH, QUESTIONBREATH, QUESTIONTHROAT, QUESTIONNAUSEA, QUESTIONDIARR, QUESTIONBLEEDING, QUESTIONRASHES,
         phoneEmployee, addressEmployee, QUESTION1, QUESTION3) {
 
         var d = new Date();
@@ -426,7 +427,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
 
             var data = {
                 employee: {
-                    recidEmployee: recid,
+                    recidEmployee: idnhanvien,
                     company: {
                         idCompany: "",
                         nameCompany: ""
@@ -506,22 +507,20 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
             $http.post('http://localhost:8086/createDeclaration', JSON.stringify(data)).then(function (response) {
                 if (response.data) {
                     setTimeout(function () {
-                        // alert("Success!");
-                        // window.location.reload();
                         $http({
                             method: "GET",
-                            url: "http://localhost:8086/findbyempcode/"+recid
+                            url: "http://localhost:8086/findbyempcode/" + idnhanvien
                         }).then(function mySuccess(response) {
                             $scope.declarationemp = response.data;
-                            var iddecuoi;
-                            angular.forEach($scope.decdateEmployee, function (item) {
+                            angular.forEach($scope.declarationemp, function (item) {
                                 iddecuoi = item.controlnoEmployee;
                             })
-                            window.location.assign("http://127.0.0.1:5500/view/successpage.html?contro="+iddecuoi);
+                            window.location.assign("http://127.0.0.1:5500/view/successpage.html?contro=" + iddecuoi);
                         }, function myError(response) {
                             $scope.declarationemp = response.statusText;
                         });
-                    }, 2000);
+                        localStorage.clear();
+                    }, 2000)
                 }
             }, function (response) {
             });

@@ -2,11 +2,12 @@ var app = angular.module('SuccessApp', []);
 app.controller('successCtrl', function ($scope, $http) {
 
 
+    var idcontro = location.search.split('contro=')[1];
 
     $http({
 
         method: "GET",
-        url: "http://192.168.2.12:8086/declaration/1"
+        url: "http://192.168.2.12:8086/declaration/"+idcontro
 
     }).then(function mySuccess(response) {
         console.log(response.data);
