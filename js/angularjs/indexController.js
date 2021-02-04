@@ -25,6 +25,7 @@ app.controller('indexCtrl', function ($scope, $http) {
             }
             else {
                 window.location.assign('http://127.0.0.1:5500/view/medicaldeclaration.html?em='+ empcodeEmployee);
+                window.localStorage.setItem("empcode",empcodeEmployee);
             }
         }, function myError(response) {
             $scope.employee = response.statusText;

@@ -7,6 +7,10 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
     }
     document.getElementById("formkhaibao").style.display = 'none';
 
+    var checkemp = window.localStorage.getItem("empcode");
+    if(checkemp == undefined){
+        window.location.assign("http://127.0.0.1:5500/index.html");
+    }
     $http({
         method: "GET",
         url: "http://192.168.2.12:8086/employeebyempcode/" + idemp
@@ -512,6 +516,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
                             url: "http://192.168.2.12:8086/findbyempcode/" + idnhanvien
                         }).then(function mySuccess(response) {
                             $scope.declarationemp = response.data;
+                            window.localStorage.removeItem("empcode");
                             window.location.assign("http://127.0.0.1:5500/view/successpage.html?contro=" + $scope.declarationemp);
                         }, function myError(response) {
                             $scope.declarationemp = response.statusText;
