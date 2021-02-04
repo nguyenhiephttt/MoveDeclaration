@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +18,13 @@
         <div class="container ">
             <div class="row mt-3">
                 <div class="col-12 alert alert-danger p-3">
+                    <div class="d-flex justify-content-center mb-3">
+                        <img src="img/oishi.jpg" class="img-fluid justify-content-center" alt="Responsive image" width="500em">
+                    </div>
                     <h4 class="text-center">Trang khai báo y tế đối với NLĐ sau thời gian nghỉ dài hạn</h4>
                     <h3 class="text-center">MEDICAL DECLARATION</h3>
-                    <h5 class="mt-4 text-center">Đây là tài liệu quan trọng, thông tin của Anh/Chị sẽ giúp cơ quan y tế
-                        liên lạc khi cần thiết để phòng chống dịch bệnh truyền nhiễm</h5>
-                    <p class="text-center"> This is an important document, your information will help the health
-                        authorities in contacting when necessary to prevent infectious diseases, please cooperate for
-                        your safety as well as everyone else </p>
+                    <h5 class="mt-4 text-center">Đây là tài liệu quan trọng, thông tin của Anh/Chị sẽ giúp cơ quan y tế liên lạc khi cần thiết để phòng chống dịch bệnh truyền nhiễm</h5>
+                    <p class="text-center"> This is an important document, your information will help the health authorities in contacting when necessary to prevent infectious diseases, please cooperate for your safety as well as everyone else </p>
 
                 </div>
 
@@ -35,40 +34,33 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="">Họ và tên/Full Name</label>
-                                <input type="text" class="form-control" id="fullnameEmployee"
-                                    ng-model="fullnameEmployee" disabled>
+                                <input type="text" class="form-control" id="fullnameEmployee" ng-model="fullnameEmployee" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="">Công ty/Company</label>
-                                <input type="text" class="form-control" id="nameCompany" ng-model="nameCompany"
-                                    disabled>
+                                <input type="text" class="form-control" id="nameCompany" ng-model="nameCompany" disabled>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6" id="employeee">
                                 <label for="">Mã Nhân Viên / ID Employee</label>
-                                <input type="text" class="form-control" id="idnhanvien"
-                                    ng-model="idnhanvien" disabled>
+                                <input type="text" class="form-control" id="idnhanvien" ng-model="idnhanvien" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="">Mã Nhân Viên / ID Employee</label>
-                                <input type="text" class="form-control" id="empcodeee"
-                                    ng-model="empcodeee" disabled>
+                                <input type="text" class="form-control" id="empcodeee" ng-model="empcodeee" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="">Bộ phận/ Department</label>
-                                <input type="text" class="form-control" id="departmentEmployee"
-                                    ng-model="departmentEmployee" disabled>
+                                <input type="text" class="form-control" id="departmentEmployee" ng-model="departmentEmployee" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="">Năm sinh/ Date of brith</label>
-                                <input type="text" class="form-control" id="dateofbirthEmployee"
-                                    ng-model="dateofbirthEmployee" disabled>
+                                <input type="text" class="form-control" id="dateofbirthEmployee" ng-model="dateofbirthEmployee" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="">Quốc tịch/ Nationality</label>
-                                <input type="text" class="form-control" id="nationalityEmployee"
-                                    ng-model="nationalityEmployee" disabled>
+                                <input type="text" class="form-control" id="nationalityEmployee" ng-model="nationalityEmployee" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Số hộ chiếu hoặc giấy CMND/passport No. or ID</label>
@@ -76,14 +68,12 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Điện thoại/ Phone</label>
-                                <input type="text" class="form-control" id="phoneEmployee" ng-model="phoneEmployee" 
-                                    >
+                                <input type="text" class="form-control" id="phoneEmployee" ng-model="phoneEmployee">
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="inputPassword4">Địa chỉ nơi ở tại Việt Nam/ Residential Address in
                                     VietNam</label>
-                                <input type="text" class="form-control" id="addressEmployee" ng-model="addressEmployee"
-                                    >
+                                <input type="text" class="form-control" id="addressEmployee" ng-model="addressEmployee">
                             </div>
 
                         </div>
@@ -100,8 +90,7 @@
                         </div>
                         <div class="form-group col-md-5">
                             <div class="form-group col-md-6">
-                                <select id="QUESTION1" class="form-control" name="QUESTION1" id="QUESTION1"
-                                    ng-change="choosequestion1(QUESTION1)" ng-model="QUESTION1">
+                                <select id="QUESTION1" class="form-control" name="QUESTION1" id="QUESTION1" ng-change="choosequestion1(QUESTION1)" ng-model="QUESTION1">
                                     <option value="1">Có / Yes</option>
                                     <option value="0">Không / No</option>
                                 </select>
@@ -121,8 +110,7 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="">Địa điểm khởi hành (Departure location)</label>
-                                <select class="form-control" name="diadiemkhoihanh" id="diadiemkhoihanh"
-                                    ng-model="diadiemkhoihanh">
+                                <select class="form-control" name="diadiemkhoihanh" id="diadiemkhoihanh" ng-model="diadiemkhoihanh">
                                     <option ng-repeat="x in Provinces | orderBy: 'idProvince'"
                                         value="{{x.nameProvince}}">
                                         {{x.nameProvince}}</option>
@@ -142,21 +130,18 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Phương tiện di chuyển (Mode of Transport)</label>
-                                <select class="form-control" name="phuongtiendichuyen" id="phuongtiendichuyen"
-                                    ng-model="phuongtiendichuyen">
+                                <select class="form-control" name="phuongtiendichuyen" id="phuongtiendichuyen" ng-model="phuongtiendichuyen">
                                     <option ng-repeat="x in Transportations | orderBy: 'idTranposition'"
                                         value="{{x.nameTranposition}}">
                                         {{x.nameTranposition}}</option>
                                 </select> </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Số chỗ ngồi (Seat No.)</label>
-                                <input type="text" class="form-control" id="chongoi" ng-model="chongoi"
-                                    ng-required="true">
+                                <input type="text" class="form-control" id="chongoi" ng-model="chongoi" ng-required="true">
                             </div>
                             <div class="form-row col-md-12">
                                 <div class="form-group col-md-6 ">
-                                    <button type="button" class="btn btn-primary mb-2"
-                                        ng-click="addtotable(ngaykhoihanh,diadiemkhoihanh,ngayden,noiden,phuongtiendichuyen)">Thêm
+                                    <button type="button" class="btn btn-primary mb-2" ng-click="addtotable(ngaykhoihanh,diadiemkhoihanh,ngayden,noiden,phuongtiendichuyen)">Thêm
                                         vào
                                         lịch trình / Add to table declaration</button>
                                 </div>
@@ -189,28 +174,22 @@
                                         <tr class="bg-light">
                                             <td><label>1</label></td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="DEPADATE1"
-                                                    ng-model="DEPADATE1" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPADATE1" ng-model="DEPADATE1" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <input type="text" class="form-control input-move " id="DEPALOCA1"
-                                                    ng-model="DEPALOCA1" disabled>
+                                                <input type="text" class="form-control input-move " id="DEPALOCA1" ng-model="DEPALOCA1" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control  input-move" id="ARRIDATE1"
-                                                    ng-model="ARRIDATE1" disabled>
+                                                <input type="text" class="form-control  input-move" id="ARRIDATE1" ng-model="ARRIDATE1" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move " id="ARRILOCA1"
-                                                    ng-model="ARRILOCA1" disabled>
+                                                <input type="text" class="form-control input-move " id="ARRILOCA1" ng-model="ARRILOCA1" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move " id="MODETRANS1"
-                                                    ng-model="MODETRANS1" disabled>
+                                                <input type="text" class="form-control input-move " id="MODETRANS1" ng-model="MODETRANS1" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="SEATNO1" ng-model="SEATNO1"
-                                                    disabled>
+                                                <input type="text" class="form-control input-move" id="SEATNO1" ng-model="SEATNO1" disabled>
                                             </td>
                                             <!-- <td><button class="btn btn-success"
                                                     ng-click="xoadong1()">Xóa/Remove</button></td> -->
@@ -218,28 +197,22 @@
                                         <tr class="bg-light">
                                             <td><label>2</label></td>
                                             <td>
-                                                <input type="text" class="form-control input-move " id="DEPADATE2"
-                                                    ng-model="DEPADATE2" disabled>
+                                                <input type="text" class="form-control input-move " id="DEPADATE2" ng-model="DEPADATE2" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <input type="text" class="form-control input-move " id="DEPALOCA2"
-                                                    ng-model="DEPALOCA2" disabled>
+                                                <input type="text" class="form-control input-move " id="DEPALOCA2" ng-model="DEPALOCA2" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRIDATE2"
-                                                    ng-model="ARRIDATE2" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRIDATE2" ng-model="ARRIDATE2" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRILOCA2"
-                                                    ng-model="ARRILOCA2" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRILOCA2" ng-model="ARRILOCA2" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move " id="MODETRANS2"
-                                                    ng-model="MODETRANS2" disabled>
+                                                <input type="text" class="form-control input-move " id="MODETRANS2" ng-model="MODETRANS2" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="SEATNO2" ng-model="SEATNO2"
-                                                    disabled>
+                                                <input type="text" class="form-control input-move" id="SEATNO2" ng-model="SEATNO2" disabled>
                                             </td>
                                             <!-- <td><button class="btn btn-success"
                                                     ng-click="xoadong2()">Xóa/Remove</button></td> -->
@@ -247,28 +220,22 @@
                                         <tr class="bg-light">
                                             <td><label>3</label></td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="DEPADATE3"
-                                                    ng-model="DEPADATE3" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPADATE3" ng-model="DEPADATE3" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <input type="text" class="form-control input-move" id="DEPALOCA3"
-                                                    ng-model="DEPALOCA3" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPALOCA3" ng-model="DEPALOCA3" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRIDATE3"
-                                                    ng-model="ARRIDATE3" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRIDATE3" ng-model="ARRIDATE3" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRILOCA3"
-                                                    ng-model="ARRILOCA3" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRILOCA3" ng-model="ARRILOCA3" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="MODETRANS3"
-                                                    ng-model="MODETRANS3" disabled>
+                                                <input type="text" class="form-control input-move" id="MODETRANS3" ng-model="MODETRANS3" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="SEATNO3" ng-model="SEATNO3"
-                                                    disabled>
+                                                <input type="text" class="form-control input-move" id="SEATNO3" ng-model="SEATNO3" disabled>
                                             </td>
                                             <!-- <td><button class="btn btn-success"
                                                     ng-click="xoadong3()">Xóa/Remove</button></td> -->
@@ -276,28 +243,22 @@
                                         <tr class="bg-light">
                                             <td><label>4</label></td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="DEPADATE4"
-                                                    ng-model="DEPADATE4" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPADATE4" ng-model="DEPADATE4" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <input type="text" class="form-control input-move" id="DEPALOCA4"
-                                                    ng-model="DEPALOCA4" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPALOCA4" ng-model="DEPALOCA4" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRIDATE4"
-                                                    ng-model="ARRIDATE4" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRIDATE4" ng-model="ARRIDATE4" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRILOCA4"
-                                                    ng-model="ARRILOCA4" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRILOCA4" ng-model="ARRILOCA4" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="MODETRANS4"
-                                                    ng-model="MODETRANS4" disabled>
+                                                <input type="text" class="form-control input-move" id="MODETRANS4" ng-model="MODETRANS4" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="SEATNO4" ng-model="SEATNO4"
-                                                    disabled>
+                                                <input type="text" class="form-control input-move" id="SEATNO4" ng-model="SEATNO4" disabled>
                                             </td>
                                             <!-- <td><button class="btn btn-success"
                                                     ng-click="xoadong4()">Xóa/Remove</button></td> -->
@@ -305,28 +266,22 @@
                                         <tr class="bg-light">
                                             <td><label>5</label></td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="DEPADATE5"
-                                                    ng-model="DEPADATE5" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPADATE5" ng-model="DEPADATE5" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <input type="text" class="form-control input-move" id="DEPALOCA5"
-                                                    ng-model="DEPALOCA5" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPALOCA5" ng-model="DEPALOCA5" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRIDATE5"
-                                                    ng-model="ARRIDATE5" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRIDATE5" ng-model="ARRIDATE5" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRILOCA5"
-                                                    ng-model="ARRILOCA5" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRILOCA5" ng-model="ARRILOCA5" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="MODETRANS5"
-                                                    ng-model="MODETRANS5" disabled>
+                                                <input type="text" class="form-control input-move" id="MODETRANS5" ng-model="MODETRANS5" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="SEATNO5" ng-model="SEATNO5"
-                                                    disabled>
+                                                <input type="text" class="form-control input-move" id="SEATNO5" ng-model="SEATNO5" disabled>
                                             </td>
                                             <!-- <td><button class="btn btn-success"
                                                     ng-click="xoadong5()">Xóa/Remove</button></td> -->
@@ -334,28 +289,22 @@
                                         <tr class="bg-light">
                                             <td><label>6</label></td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="DEPADATE6"
-                                                    ng-model="DEPADATE6" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPADATE6" ng-model="DEPADATE6" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <input type="text" class="form-control input-move" id="DEPALOCA6"
-                                                    ng-model="DEPALOCA6" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPALOCA6" ng-model="DEPALOCA6" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRIDATE6"
-                                                    ng-model="ARRIDATE6" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRIDATE6" ng-model="ARRIDATE6" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRILOCA6"
-                                                    ng-model="ARRILOCA6" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRILOCA6" ng-model="ARRILOCA6" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="MODETRANS6"
-                                                    ng-model="MODETRANS6" disabled>
+                                                <input type="text" class="form-control input-move" id="MODETRANS6" ng-model="MODETRANS6" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="SEATNO6" ng-model="SEATNO6"
-                                                    disabled>
+                                                <input type="text" class="form-control input-move" id="SEATNO6" ng-model="SEATNO6" disabled>
                                             </td>
                                             <!-- <td><button class="btn btn-success"
                                                     ng-click="xoadong6()">Xóa/Remove</button></td> -->
@@ -363,28 +312,22 @@
                                         <tr class="bg-light">
                                             <td><label>7</label></td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="DEPADATE7"
-                                                    ng-model="DEPADATE7" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPADATE7" ng-model="DEPADATE7" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <input type="text" class="form-control input-move" id="DEPALOCA7"
-                                                    ng-model="DEPALOCA7" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPALOCA7" ng-model="DEPALOCA7" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRIDATE7"
-                                                    ng-model="ARRIDATE7" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRIDATE7" ng-model="ARRIDATE7" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRILOCA7"
-                                                    ng-model="ARRILOCA7" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRILOCA7" ng-model="ARRILOCA7" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="MODETRANS7"
-                                                    ng-model="MODETRANS7" disabled>
+                                                <input type="text" class="form-control input-move" id="MODETRANS7" ng-model="MODETRANS7" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="SEATNO7" ng-model="SEATNO7"
-                                                    disabled>
+                                                <input type="text" class="form-control input-move" id="SEATNO7" ng-model="SEATNO7" disabled>
                                             </td>
                                             <!-- <td><button class="btn btn-success"
                                                     ng-click="xoadong7()">Xóa/Remove</button></td> -->
@@ -392,28 +335,22 @@
                                         <tr class="bg-light">
                                             <td><label>8</label></td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="DEPADATE8"
-                                                    ng-model="DEPADATE8" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPADATE8" ng-model="DEPADATE8" disabled>
                                             </td>
                                             <td class="form-group ">
-                                                <input type="text" class="form-control input-move" id="DEPALOCA8"
-                                                    ng-model="DEPALOCA8" disabled>
+                                                <input type="text" class="form-control input-move" id="DEPALOCA8" ng-model="DEPALOCA8" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="ARRIDATE8"
-                                                    ng-model="ARRIDATE8" disabled>
+                                                <input type="text" class="form-control input-move" id="ARRIDATE8" ng-model="ARRIDATE8" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move " id="ARRILOCA8"
-                                                    ng-model="ARRILOCA8" disabled>
+                                                <input type="text" class="form-control input-move " id="ARRILOCA8" ng-model="ARRILOCA8" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="MODETRANS8"
-                                                    ng-model="MODETRANS8" disabled>
+                                                <input type="text" class="form-control input-move" id="MODETRANS8" ng-model="MODETRANS8" disabled>
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control input-move" id="SEATNO8" ng-model="SEATNO8"
-                                                    disabled>
+                                                <input type="text" class="form-control input-move" id="SEATNO8" ng-model="SEATNO8" disabled>
                                             </td>
                                             <!-- <td><button class="btn btn-success"
                                                     ng-click="xoadong8()">Xóa/Remove</button></td> -->
@@ -456,8 +393,7 @@
                             <label>Sốt (Fever)</label>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="QUESTIONFEVER" class="form-control" name="QUESTIONFEVER" id="QUESTIONFEVER"
-                                ng-change="choosequestionfever(QUESTIONFEVER)" ng-model="QUESTIONFEVER">
+                            <select id="QUESTIONFEVER" class="form-control" name="QUESTIONFEVER" id="QUESTIONFEVER" ng-change="choosequestionfever(QUESTIONFEVER)" ng-model="QUESTIONFEVER">
                                 <option value="1">Có / Yes</option>
                                 <option value="0">Không / No</option>
                             </select>
@@ -468,8 +404,7 @@
                             <label>Ho (Cough)</label>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="QUESTIONCOUGH" class="form-control" name="QUESTIONCOUGH" id="QUESTIONCOUGH"
-                                ng-change="choosequestioncough(QUESTIONCOUGH)" ng-model="QUESTIONCOUGH">
+                            <select id="QUESTIONCOUGH" class="form-control" name="QUESTIONCOUGH" id="QUESTIONCOUGH" ng-change="choosequestioncough(QUESTIONCOUGH)" ng-model="QUESTIONCOUGH">
                                 <option value="1">Có / Yes</option>
                                 <option value="0">Không / No</option>
                             </select>
@@ -480,8 +415,7 @@
                             <label>Khó thở (Shortness of breath)</label>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="QUESTIONBREATH" class="form-control" name="QUESTIONBREATH" id="QUESTIONBREATH"
-                                ng-change="choosequestionbreath(QUESTIONBREATH)" ng-model="QUESTIONBREATH">
+                            <select id="QUESTIONBREATH" class="form-control" name="QUESTIONBREATH" id="QUESTIONBREATH" ng-change="choosequestionbreath(QUESTIONBREATH)" ng-model="QUESTIONBREATH">
                                 <option value="1">Có / Yes</option>
                                 <option value="0">Không / No</option>
                             </select>
@@ -492,8 +426,7 @@
                             <label>Đau họng (Sore throat)</label>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="QUESTIONTHROAT" class="form-control" name="QUESTIONTHROAT" id="QUESTIONTHROAT"
-                                ng-change="choosequestionthroat(QUESTIONTHROAT)" ng-model="QUESTIONTHROAT">
+                            <select id="QUESTIONTHROAT" class="form-control" name="QUESTIONTHROAT" id="QUESTIONTHROAT" ng-change="choosequestionthroat(QUESTIONTHROAT)" ng-model="QUESTIONTHROAT">
                                 <option value="1">Có / Yes</option>
                                 <option value="0">Không / No</option>
                             </select>
@@ -504,8 +437,7 @@
                             <label>Nôn / buồn nôn ( Vomit/ Nausea )</label>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="QUESTIONNAUSEA" class="form-control" name="QUESTIONNAUSEA" id="QUESTIONNAUSEA"
-                                ng-change="choosequestionnausea(QUESTIONNAUSEA)" ng-model="QUESTIONNAUSEA">
+                            <select id="QUESTIONNAUSEA" class="form-control" name="QUESTIONNAUSEA" id="QUESTIONNAUSEA" ng-change="choosequestionnausea(QUESTIONNAUSEA)" ng-model="QUESTIONNAUSEA">
                                 <option value="1">Có / Yes</option>
                                 <option value="0">Không / No</option>
                             </select>
@@ -516,8 +448,7 @@
                             <label>Tiêu chảy ( Diarrhoea )</label>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="QUESTIONDIARR" class="form-control" name="QUESTIONDIARR" id="QUESTIONDIARR"
-                                ng-change="choosequestiondiarr(QUESTIONDIARR)" ng-model="QUESTIONDIARR">
+                            <select id="QUESTIONDIARR" class="form-control" name="QUESTIONDIARR" id="QUESTIONDIARR" ng-change="choosequestiondiarr(QUESTIONDIARR)" ng-model="QUESTIONDIARR">
                                 <option value="1">Có / Yes</option>
                                 <option value="0">Không / No</option>
                             </select>
@@ -528,9 +459,7 @@
                             <label>Xuất huyết ngoài da ( Skin bleeding )</label>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="QUESTIONBLEEDING" class="form-control" name="QUESTIONBLEEDING"
-                                id="QUESTIONBLEEDING" ng-change="choosequestionbleeding(QUESTIONBLEEDING)"
-                                ng-model="QUESTIONBLEEDING">
+                            <select id="QUESTIONBLEEDING" class="form-control" name="QUESTIONBLEEDING" id="QUESTIONBLEEDING" ng-change="choosequestionbleeding(QUESTIONBLEEDING)" ng-model="QUESTIONBLEEDING">
                                 <option value="1">Có / Yes</option>
                                 <option value="0">Không / No</option>
                             </select>
@@ -541,8 +470,7 @@
                             <label>Nổi ban ngoài da ( Skin rashes )</label>
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="QUESTIONRASHES" class="form-control" name="QUESTIONRASHES" id="QUESTIONRASHES"
-                                ng-change="choosequestionrashes(QUESTIONRASHES)" ng-model="QUESTIONRASHES">
+                            <select id="QUESTIONRASHES" class="form-control" name="QUESTIONRASHES" id="QUESTIONRASHES" ng-change="choosequestionrashes(QUESTIONRASHES)" ng-model="QUESTIONRASHES">
                                 <option value="1">Có / Yes</option>
                                 <option value="0">Không / No</option>
                             </select>
@@ -565,8 +493,7 @@
 
                         </div>
                         <div class="form-group col-md-3">
-                            <select id="QUESTION3" class="form-control" name="QUESTION3" id="QUESTION3"
-                                ng-change="choosequestioncare(QUESTION3)" ng-model="QUESTION3">
+                            <select id="QUESTION3" class="form-control" name="QUESTION3" id="QUESTION3" ng-change="choosequestioncare(QUESTION3)" ng-model="QUESTION3">
                                 <option value="1">Có / Yes</option>
                                 <option value="0">Không / No</option>
                             </select>
@@ -584,7 +511,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-success mt-2 mb-2 float-right"  ng-click="submitform(idnhanvien,QUESTIONFEVER, QUESTIONCOUGH, QUESTIONBREATH, QUESTIONTHROAT, QUESTIONNAUSEA, QUESTIONDIARR, QUESTIONBLEEDING, QUESTIONRASHES,
+                <button type="button" class="btn btn-success mt-2 mb-2 float-right" ng-click="submitform(idnhanvien,QUESTIONFEVER, QUESTIONCOUGH, QUESTIONBREATH, QUESTIONTHROAT, QUESTIONNAUSEA, QUESTIONDIARR, QUESTIONBLEEDING, QUESTIONRASHES,
                 phoneEmployee, addressEmployee, QUESTION1, QUESTION3)">Gửi
                     / Submit</button>
 
@@ -596,12 +523,8 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="/js/angularjs/angular.min.js"></script>
     <script src="/js/angularjs/medicaldeclarationController.js"></script>
 
