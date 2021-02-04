@@ -1,19 +1,28 @@
 var app = angular.module('declarationApp', []);
 app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
 
-    var idemp = location.search.split('em=')[1];
-    if (idemp == undefined) {
-        window.location.assign("http://192.168.2.12:91/index.html");
-    }
+    // var idemp = location.search.split('em=')[1];
+    // alert(idemp);
+    // var company = location.search.split('c=')[1];
+    // alert(company);
+    // var url_string = window.location.href;
+    // var url = new URL(url_string);
+    // var idemp = url.searchParams.get("em");
+    // alert(idemp);
+    // var company = url.searchParams.get("c");
+    // alert(company);
     document.getElementById("formkhaibao").style.display = 'none';
     document.getElementById("employeee").style.display = 'none';
-    var checkemp = window.localStorage.getItem("empcode");
-    if(checkemp == undefined){
+    var idemp = window.localStorage.getItem("empcode");
+    // alert(idemp);
+    var idCompany = window.localStorage.getItem("company");
+    // alert(idCompany);
+    if(idemp == undefined || idCompany == undefined){
         window.location.assign("http://192.168.2.12:91/index.html");
     }
     $http({
         method: "GET",
-        url: "http://192.168.2.12:8086/employeebyempcode/" + idemp
+        url: "http://192.168.2.12:8086/employeebyempcode/" + idemp + "/" + idCompany
     }).then(function mySuccess(response) {
         $scope.employee = response.data;
         angular.forEach($scope.employee, function (item) {
@@ -357,6 +366,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
 
     $scope.submitform = function (idnhanvien,QUESTIONFEVER, QUESTIONCOUGH, QUESTIONBREATH, QUESTIONTHROAT, QUESTIONNAUSEA, QUESTIONDIARR, QUESTIONBLEEDING, QUESTIONRASHES,
         phoneEmployee, addressEmployee, QUESTION1, QUESTION3) {
+        
 
         var d = new Date();
         var date = d.getUTCDate();
@@ -380,6 +390,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
             alert("Vui lòng đồng ý cam kết / Please agree to the commitment");
         }
         else {
+            document.getElementById("clicksubmit").disabled = true;
             var DEPADATE1 = document.getElementById("DEPADATE1").value;
             var DEPADATE2 = document.getElementById("DEPADATE2").value;
             var DEPADATE3 = document.getElementById("DEPADATE3").value;
