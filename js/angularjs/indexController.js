@@ -4,7 +4,7 @@ app.controller('indexCtrl', function ($scope, $http) {
     ///company
     $http({
         method: "GET",
-        url: "http://localhost:8086/Companys"
+        url: "http://192.168.2.12:8086/Companys"
     }).then(function mySuccess(response) {
         $scope.Companys = response.data;
     }, function myError(response) {
@@ -17,7 +17,7 @@ app.controller('indexCtrl', function ($scope, $http) {
     $scope.check = function (idCompany,empcodeEmployee,smcEmployee) {
         $http({
             method: "GET",
-            url: "http://localhost:8086/employee/" + idCompany + "/" + empcodeEmployee + "/" + smcEmployee
+            url: "http://192.168.2.12:8086/employee/" + idCompany + "/" + empcodeEmployee + "/" + smcEmployee
         }).then(function mySuccess(response) {
             $scope.employee = response.data;
             if ($scope.employee == 0) {

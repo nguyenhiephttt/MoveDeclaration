@@ -9,7 +9,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
 
     $http({
         method: "GET",
-        url: "http://localhost:8086/employeebyempcode/" + idemp
+        url: "http://192.168.2.12:8086/employeebyempcode/" + idemp
     }).then(function mySuccess(response) {
         $scope.employee = response.data;
         angular.forEach($scope.employee, function (item) {
@@ -28,7 +28,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
     ///transportation
     $http({
         method: "GET",
-        url: "http://localhost:8086/Transportations"
+        url: "http://192.168.2.12:8086/Transportations"
     }).then(function mySuccess(response) {
         $scope.Transportations = response.data;
     }, function myError(response) {
@@ -38,7 +38,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
     ///province
     $http({
         method: "GET",
-        url: "http://localhost:8086/Provinces"
+        url: "http://192.168.2.12:8086/Provinces"
     }).then(function mySuccess(response) {
         $scope.Provinces = response.data;
     }, function myError(response) {
@@ -504,12 +504,12 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
                 question3Employee: QUESTION3
             }
 
-            $http.post('http://localhost:8086/createDeclaration', JSON.stringify(data)).then(function (response) {
+            $http.post('http://192.168.2.12:8086/createDeclaration', JSON.stringify(data)).then(function (response) {
                 if (response.data) {
                     setTimeout(function () {
                         $http({
                             method: "GET",
-                            url: "http://localhost:8086/findbyempcode/" + idnhanvien
+                            url: "http://192.168.2.12:8086/findbyempcode/" + idnhanvien
                         }).then(function mySuccess(response) {
                             $scope.declarationemp = response.data;
                             angular.forEach($scope.declarationemp, function (item) {
