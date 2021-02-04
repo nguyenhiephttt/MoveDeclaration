@@ -21,7 +21,7 @@ app.controller('indexCtrl', function ($scope, $http) {
         }).then(function mySuccess(response) {
             $scope.employee = response.data;
             if ($scope.employee == 0) {
-                alert("Does not exist");
+                alert("Không tồn tại nhân viên / Does not exist");
             }
             else {
                 window.location.assign('http://127.0.0.1:5500/view/medicaldeclaration.html?em='+ empcodeEmployee);

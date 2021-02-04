@@ -362,13 +362,13 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
         var checkcamket = document.getElementById("checkcamket").checked;
 
         if (phoneEmployee == undefined || addressEmployee == undefined) {
-            alert("Vui lòng nhập đủ thông tin.")
+            alert("Vui lòng nhập đủ thông tin. / Please enter enough information.")
         }
         else if (QUESTION1 == 1 && $scope.solannhap == 0) {
-            alert("Vui lòng khai báo lịch trình");
+            alert("Vui lòng khai báo lịch trình / Please declare the schedule");
         }
         else if (checkcamket == false) {
-            alert("Vui lòng đồng ý cam kết");
+            alert("Vui lòng đồng ý cam kết / Please agree to the commitment");
         }
         else {
             var DEPADATE1 = document.getElementById("DEPADATE1").value;
@@ -512,14 +512,10 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
                             url: "http://192.168.2.12:8086/findbyempcode/" + idnhanvien
                         }).then(function mySuccess(response) {
                             $scope.declarationemp = response.data;
-                            angular.forEach($scope.declarationemp, function (item) {
-                                iddecuoi = item.controlnoEmployee;
-                            })
-                            window.location.assign("http://127.0.0.1:5500/view/successpage.html?contro=" + iddecuoi);
+                            window.location.assign("http://127.0.0.1:5500/view/successpage.html?contro=" + $scope.declarationemp);
                         }, function myError(response) {
                             $scope.declarationemp = response.statusText;
                         });
-                        localStorage.clear();
                     }, 2000)
                 }
             }, function (response) {
