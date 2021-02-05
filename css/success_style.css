@@ -2,3 +2,8 @@
     width: 15em !important;
 }
 
+@media screen and (max-width: 1000px){
+    .btn-print{
+        display: none !important;
+    }
+}
