@@ -12,6 +12,10 @@ app.controller('successCtrl', function ($scope, $http) {
         event.preventDefault();            
     });
 
+
+    $scope.print = function() {
+        window.location.assign("http://192.168.2.12:91/view/Print.html?contro="+idcontro);
+    }
     $http({
 
         method: "GET",

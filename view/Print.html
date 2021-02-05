@@ -1,0 +1,761 @@
+<html>
+
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta name=Generator content="Microsoft Word 15 (filtered)">
+    
+    <style>
+        <!--
+        /* Font Definitions */
+        @font-face {
+            font-family: Wingdings;
+            panose-1: 5 0 0 0 0 0 0 0 0 0;
+        }
+
+        @font-face {
+            font-family: SimSun;
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+        }
+
+        @font-face {
+            font-family: "Cambria Math";
+            panose-1: 2 4 5 3 5 4 6 3 2 4;
+        }
+
+        @font-face {
+            font-family: Calibri;
+            panose-1: 2 15 5 2 2 2 4 3 2 4;
+        }
+
+        @font-face {
+            font-family: "Wingdings 2";
+            panose-1: 5 2 1 2 1 5 7 7 7 7;
+        }
+
+        @font-face {
+            font-family: "\.VnTime";
+        }
+
+        @font-face {
+            font-family: Tahoma;
+            panose-1: 2 11 6 4 3 5 4 4 2 4;
+        }
+
+        @font-face {
+            font-family: "\@SimSun";
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+        }
+
+        /* Style Definitions */
+        p.MsoNormal,
+        li.MsoNormal,
+        div.MsoNormal {
+            margin: 0in;
+            font-size: 14.0pt;
+            font-family: "Times New Roman", serif;
+        }
+
+        /* Page Definitions */
+        @page WordSection1 {
+            size: 595.45pt 841.7pt;
+            margin: 28.35pt 56.7pt 42.55pt 67.5pt;
+        }
+
+        div.WordSection1 {
+            page: WordSection1;
+        }
+
+        /* List Definitions */
+        ol {
+            margin-bottom: 0in;
+        }
+
+        ul {
+            margin-bottom: 0in;
+        }
+        -->
+    </style>
+
+</head>
+
+<body ng-app='PrintApp' ng-controller="printCtrl"  style='word-wrap:break-word; font-size: 200px;'  >
+
+    <div>
+
+        <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center'><a name="OLE_LINK1"></a><a
+                name="OLE_LINK2"><b><span lang=FR style='font-size:
+10.0pt'>TỜ KHAI Y TẾ ĐỐI VỚI NLĐ SAU THỜI GIAN NGHỈ DÀI HẠN</span></b></a></p>
+
+        <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center'><b><span lang=FR
+                    style='font-size:12.0pt;color:#0070C0'>MEDICAL DECLARATION </span></b></p>
+
+        <p class=MsoNormal align=center style='text-align:center'><a name="OLE_LINK3"></a><a name="OLE_LINK4"></a><a
+                name="OLE_LINK5"><b><span lang=FR style='font-size:
+9.0pt'>Đây là tài liệu quan trọng, thông tin của Anh/Chị sẽ giúp cơ quan y tế </span></b></a></p>
+
+        <p class=MsoNormal align=center style='text-align:center'><b><span lang=FR style='font-size:9.0pt'>liên lạc khi
+                    cần thiết để phòng chống dịch bệnh truyền
+                    nhiễm.</span></b></p>
+
+        <p class=MsoNormal align=center style='text-align:center'><b><i><span lang=FR
+                        style='font-size:9.0pt;color:#0070C0'>This is an important document, your
+                        information will help the health authorities in contacting when necessary to
+                        prevent infectious diseases, </span></i></b><b><i><span lang=FR
+                        style='font-size:9.0pt;color:red'>please cooperate for your safety as well as
+                        everyone else</span></i></b><b><i><span lang=FR style='font-size:10.0pt;
+color:#0070C0'></span></i></b></p>
+
+        <p class=MsoNormal><b><i><span lang=FR
+                        style='font-size:10.0pt'>                                                                                                       
+                                             </span></i></b></p>
+
+        <p class=MsoNormal><b><i><span lang=FR
+                        style='font-size:9.0pt'>                                                                                                                                
+                    </span></i></b><i><span style='font-size:9.0pt; margin-left: 9em'>Ngày/Date: </span></i><span
+                style='font-size:9.0pt'>{{decdateEmployee}}</span>
+                </p>
+                <p class=MsoNormal><b><i><span lang=FR
+                        style='font-size:9.0pt'>                                                                                                                                
+                    </span></i></b><i><span style='font-size:9.0pt; margin-left: 9em;'>Số tờ khai/No.: </span></i><span
+                style='font-size:9.0pt'>{{controlnoEmployee}} </span>
+                </p>
+
+        <p class=MsoNormal align=center style='text-align:center'><b><i><span lang=FR
+                        style='font-size:9.0pt'>&nbsp;</span></i></b></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph;line-height:
+150%'><span style='font-size:9.0pt;line-height:150%;font-family:"Wingdings 2"'></span><span
+                style='font-size:9.0pt;line-height:150%'> Họ tên (viết chữ in hoa)/ <i>Full
+                    name:</i><a name="OLE_LINK6"> <b>{{fullname}}</b>        <i style="margin-left: 2em;">Department/Section: </i> {{department}} </a></span>
+        </p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph;line-height:
+150%'><span style='font-size:9.0pt;line-height:150%;font-family:"Wingdings 2"'></span><span
+                style='font-size:9.0pt;line-height:150%'> <a name="OLE_LINK7"></a><a name="OLE_LINK8">Năm
+                    sinh</a>/<i>Date of birth</i>: {{dateofbrith}} <i style="margin-left: 2em;">Quốc tịch/Nationality</i>: {{nationality}} </span></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:-12.55pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-justify:inter-ideograph;
+line-height:150%'><span style='font-size:9.0pt;line-height:150%;font-family:
+"Wingdings 2"'></span><span style='font-size:9.0pt;line-height:150%'> <a name="OLE_LINK9" >Số hộ chiếu hoặc Giấy
+                    CMND</a>/ <istyle="margin-left: 2em;">Passport No. or ID</i >: </span><span lang=VI
+                style='font-size:9.0pt;line-height:150%'><i style="margin-left: 2em;>{{idEmployee}}</i> </span><span
+                style='font-size:9.0pt;line-height:150%'><i style="margin-left: 2em;">Điện thoại/ Phone:</i>{{phone}}<a name="OLE_LINK10"></a><a
+                    name="OLE_LINK11"></a></span></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><span
+                style='font-size:9.0pt;font-family:"Wingdings 2"'></span><span style='font-size:9.0pt'> Địa chỉ
+                nơi ở tại Việt Nam/ <i>Residential Address in
+                    Vietnam:</i >{{address}} </span></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><span
+                style='font-size:9.0pt;color:#0070C0'>
+            </span></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><span style='font-size:4.0pt'>&nbsp;</span></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><span style='font-size:9.0pt'>Trong vòng 14 ngày qua,
+                Anh/Chị có đến quốc gia/vùng
+                lãnh thổ nào không? (nếu có ghi rõ): {{question1Employee}} </span></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><span style='font-size:9.0pt;color:#0070C0'>In the
+                past 14 days, have you visited any
+            </span><span style='font-size:9.0pt;color:red'>other city/ provinces</span><span
+                style='font-size:9.0pt;color:#0070C0'>? (</span><span style='font-size:9.0pt;
+color:red'>pls</span><span style='font-size:9.0pt;color:#0070C0'>
+                specified):</span></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><span style='font-size:4.0pt;color:red'>&nbsp;</span>
+        </p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><b><span style='font-size:10.0pt;color:red'>List down
+                    all the Cities or Provinces that
+                    you plan to visit/ visited during your leave.</span></b></p>
+
+        <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=764
+            style='width:573.0pt;margin-left:1.7pt;border-collapse:collapse'>
+            <tr style='height:34.0pt'>
+                <td width=97 style='width:73.0pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:34.0pt'>
+                    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-PH
+                            style='font-size:10.0pt;font-family:"Calibri",sans-serif;color:red'>Departure
+                            date</span></p>
+                </td>
+                <td width=149 style='width:112.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:34.0pt'>
+                    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-PH
+                            style='font-size:10.0pt;font-family:"Calibri",sans-serif;color:red'>Departure
+                            Location</span></p>
+                </td>
+                <td width=97 style='width:73.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:34.0pt'>
+                    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-PH
+                            style='font-size:10.0pt;font-family:"Calibri",sans-serif;color:red'>Arrival
+                            date</span></p>
+                </td>
+                <td width=149 style='width:112.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:34.0pt'>
+                    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-PH
+                            style='font-size:10.0pt;font-family:"Calibri",sans-serif;color:red'>Arrival
+                            Destination</span></p>
+                </td>
+                <td width=143 style='width:107.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:34.0pt'>
+                    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-PH
+                            style='font-size:10.0pt;font-family:"Calibri",sans-serif;color:red'>Mode of
+                            Transport</span></p>
+                </td>
+                <td width=128 style='width:96.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:34.0pt'>
+                    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-PH
+                            style='font-size:10.0pt;font-family:"Calibri",sans-serif;color:red'>Vehicle
+                            Number/ Seat No. (if any)</span></p>
+                </td>
+            </tr>
+            <tr style='height:29.25pt'>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:29.25pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{depdate1Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:29.25pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{deplocal1Employee}}</span></p>
+                </td>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:29.25pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arridate1Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:29.25pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arriloca1Employee}}</span></p>
+                </td>
+                <td width=143 nowrap valign=bottom style='width:107.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:29.25pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{modetrans1Employee}}</span></p>
+                </td>
+                <td width=128 nowrap valign=bottom style='width:96.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:29.25pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{seatno1Employee}}</span></p>
+                </td>
+            </tr>
+
+
+
+
+            <tr style='height:27.55pt'>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:27.55pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{depdate2Employee}}</span></p>
+                </td>
+
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.55pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{deplocal2Employee}}</span></p>
+                </td>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.55pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arridate2Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.55pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arriloca2Employee}}</span></p>
+                </td>
+                <td width=143 nowrap valign=bottom style='width:107.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.55pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{modetrans2Employee}}</span></p>
+                </td>
+                <td width=128 nowrap valign=bottom style='width:96.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.55pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{seatno2Employee}}</span></p>
+                </td>
+            </tr>
+
+
+
+
+
+
+            <tr style='height:27.95pt'>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:27.95pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{depdate3Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.95pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{deplocal3Employee}}</span></p>
+                </td>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.95pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arridate3Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.95pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'> {{arriloca3Employee}} </span></p>
+                </td>
+                <td width=143 nowrap valign=bottom style='width:107.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.95pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{modetrans3Employee}}</span></p>
+                </td>
+                <td width=128 nowrap valign=bottom style='width:96.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.95pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{seatno3Employee}}</span></p>
+                </td>
+            </tr>
+
+
+
+
+
+            <tr style='height:27.7pt'>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:27.7pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{depdate4Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.7pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{deplocal4Employee}}</span></p>
+                </td>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.7pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arridate4Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.7pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arriloca4Employee}}</span></p>
+                </td>
+                <td width=143 nowrap valign=bottom style='width:107.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.7pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{modetrans4Employee}}</span></p>
+                </td>
+                <td width=128 nowrap valign=bottom style='width:96.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:27.7pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{seatno4Employee}}</span></p>
+                </td>
+            </tr>
+
+
+
+
+
+
+            <tr style='height:28.05pt'>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{depdate5Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{deplocal5Employee}}</span></p>
+                </td>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arridate5Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arriloca5Employee}}</span></p>
+                </td>
+                <td width=143 nowrap valign=bottom style='width:107.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{modetrans5Employee}}</span></p>
+                </td>
+                <td width=128 nowrap valign=bottom style='width:96.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{seatno5Employee}}</span></p>
+                </td>
+            </tr>
+
+
+
+
+
+
+            <tr style='height:28.05pt'>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'> {{depdate6Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{deplocal6Employee}}</span></p>
+                </td>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'> {{arridate6Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arriloca6Employee}}</span></p>
+                </td>
+                <td width=143 nowrap valign=bottom style='width:107.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{modetrans6Employee}}</span></p>
+                </td>
+                <td width=128 nowrap valign=bottom style='width:96.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'> {{seatno6Employee}}</span></p>
+                </td>
+            </tr>
+         
+         
+
+
+
+            <tr style='height:28.05pt'>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{depdate7Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{deplocal7Employee}}</span></p>
+                </td>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arridate7Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arriloca7Employee}}</span></p>
+                </td>
+                <td width=143 nowrap valign=bottom style='width:107.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{modetrans7Employee}}</span></p>
+                </td>
+                <td width=128 nowrap valign=bottom style='width:96.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{seatno7Employee}}</span></p>
+                </td>
+            </tr>
+
+
+
+
+
+
+            <tr style='height:28.05pt'>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{depdate8Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{deplocal8Employee}}</span></p>
+                </td>
+                <td width=97 nowrap valign=bottom style='width:73.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{arridate8Employee}}</span></p>
+                </td>
+                <td width=149 nowrap valign=bottom style='width:112.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'> {{arriloca8Employee}}</span></p>
+                </td>
+                <td width=143 nowrap valign=bottom style='width:107.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{modetrans8Employee}}</span></p>
+                </td>
+                <td width=128 nowrap valign=bottom style='width:96.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:28.05pt'>
+                    <p class=MsoNormal><span lang=EN-PH style='font-size:10.0pt;font-family:"Calibri",sans-serif;
+  color:black'>{{seatno8Employee}}</span></p>
+                </td>
+            </tr>
+        </table>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><a name="OLE_LINK28"></a><a name="OLE_LINK29"><b><span
+                        style='font-size:9.0pt;
+color:rgb(0, 0, 0)'>Trong vòng </span></b></a><b><span lang=VI style='font-size:9.0pt'>14</span></b><b><span
+                    style='font-size:9.0pt'> ngày (tính đến thời điểm rời khỏi nơi ở) Anh/Chị có thấy
+                    xuất hiện dấu hiệu nào sau đây không? / <i><span style='color:#0070C0'>Within
+                            14 days (up to the time of procedures for exit) Do you see any of the following
+                            <a name="OLE_LINK30"></a><a name="OLE_LINK31">symptoms</a>?</span></i></span></b></p>
+
+        <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=652
+            style='border-collapse:collapse;border:none'>
+            <tr style='height:7.15pt'>
+                <td width="30%" valign=top style='width:30.88%;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:7.15pt'>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'>Triệu chứng</span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><a name="OLE_LINK32"></a><a name="OLE_LINK33"><b><i><span
+                                        style='font-size:9.0pt;
+  color:#0070C0'>Symptom</span></i></b></a></p>
+                </td>
+                <td width="8%" valign=top style='width:8.24%;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:7.15pt'>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'>Có/Không</span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><i><span
+                                style='font-size:9.0pt;color:#0070C0'>Yes/No</span></i></p>
+                </td>
+                
+                <td width="31%" valign=top style='width:31.26%;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:7.15pt'>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'>Triệu chứng</span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><b><i><span
+                                    style='font-size:9.0pt;color:#0070C0'>Symptom</span></i></b></p>
+                </td>
+                <td width="9%" valign=top style='width:9.9%;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:7.15pt'>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'>Có</span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><i><span
+                                style='font-size:9.0pt;color:#0070C0'>Yes</span></i></p>
+                </td>
+                
+            </tr>
+            <tr style='height:59.8pt'>
+                <td width="30%" valign=top style='width:30.88%;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:59.8pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:-2.85pt;margin-bottom:
+  3.0pt;margin-left:-2.85pt'><a name="OLE_LINK34"><span style='font-size:9.0pt;
+  font-family:"Wingdings 2"'>&nbsp;</span></a><span style='font-size:9.0pt'>  Sốt<span style='color:#0070C0'>
+                                <i>Fever</i></span></span></p>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:-2.85pt;margin-bottom:
+  3.0pt;margin-left:-2.85pt'><span style='font-size:9.0pt;font-family:"Wingdings 2"'>&nbsp;</span><span
+                            style='font-size:9.0pt'>  Ho <i><span style='color:#0070C0'>Cough</span></i></span></p>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:-2.85pt;margin-bottom:
+  3.0pt;margin-left:-2.85pt'><span style='font-size:9.0pt;font-family:"Wingdings 2"'>&nbsp;</span><span
+                            style='font-size:9.0pt'>  </span><span lang=VI style='font-size:9.0pt'>K</span><span
+                            style='font-size:9.0pt'>hó thở <i><span style='color:#0070C0'>Shortness of
+                                    breath</span></i></span></p>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:-2.85pt;margin-bottom:
+  3.0pt;margin-left:-2.85pt'><span style='font-size:9.0pt;font-family:"Wingdings 2"'>&nbsp;</span><span
+                            style='font-size:9.0pt'>  Đau họng</span><span style='font-size:9.0pt'> <i><span
+                                    style='color:#0070C0'>Sore throat</span></i></span></p>
+                </td>
+                <td width="8%" valign=top style='width:8.24%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:59.8pt'>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'>{{fever}}</span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'>{{cough}}</span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'>{{shortnessofbreath}}</span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'> {{sorethroat}} </span></p>
+                </td>
+                
+                <td width="31%" valign=top style='width:31.26%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:59.8pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:-2.85pt;margin-bottom:
+  3.0pt;margin-left:-2.85pt'><span style='font-size:9.0pt;font-family:"Wingdings 2"'>&nbsp;</span><span
+                            style='font-size:9.0pt'> <a name="OLE_LINK35">Nôn/buồn nôn<i> <span
+                                        style='color:#0070C0'>Vomit / nausea</span></i></a></span></p>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:-2.85pt;margin-bottom:
+  3.0pt;margin-left:-2.85pt'><span style='font-size:9.0pt;font-family:"Wingdings 2"'>&nbsp;</span><span
+                            style='font-size:9.0pt'> <a name="OLE_LINK36">Tiêu chảy</a> <i><span
+                                    style='color:#0070C0'>Diarrhoea</span></i></span></p>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:-2.85pt;margin-bottom:
+  3.0pt;margin-left:-2.85pt'><span style='font-size:9.0pt;font-family:"Wingdings 2"'>&nbsp;</span><a
+                            name="OLE_LINK37"><span style='font-size:9.0pt'> Xuất huyết ngoài da</span></a><span
+                            style='font-size:9.0pt'> <i><span style='color:#0070C0'>Skin bleeding</span></i></span></p>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:-2.85pt;margin-bottom:
+  3.0pt;margin-left:-2.85pt'><span style='font-size:9.0pt;font-family:"Wingdings 2"'>&nbsp;</span><span
+                            style='font-size:9.0pt'> <a name="OLE_LINK38">Nổi ban ngoài da</a> <i><span
+                                    style='color:#0070C0'>Skin rashes</span></i></span></p>
+                </td>
+                <td width="9%" valign=top style='width:9.9%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:59.8pt'>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'> {{vomitNausea}} </span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'> {{diarrhoea}} </span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'> {{skinBleeding}} </span></p>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:-2.85pt;
+  margin-bottom:3.0pt;margin-left:-2.85pt;text-align:center'><span style='font-size:9.0pt'> {{skinRashes}} </span></p>
+                </td>
+                
+            </tr>
+        </table>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><a name="OLE_LINK41"><b><span lang=VI
+                        style='font-size:9.0pt;color:white'>L</span></b></a><b><span lang=VI style='font-size:9.0pt'>Lịch
+                    sử phơi nhiễm: Trong vòng 14 ngày qua,
+                    Anh/Chị có:</span></b><b><span
+                    style='font-size:9.0pt'>
+                </span></b></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><b><span
+                    style='font-size:9.0pt;color:#0070C0'>Exposure history: In the past 14 days,
+                    did you have:
+                    
+                </span></b></p>
+
+        <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="104%"
+            style='border-collapse:collapse;border:none'>
+            <tr style='height:20.45pt'>
+                <td width="71%" valign=top style='width:71.58%;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:20.45pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><a name="OLE_LINK47"><span style='font-size:9.0pt;
+  font-family:"Wingdings 2"'>&nbsp;</span></a><span style='font-size:9.0pt'> Trực
+                            tiếp chăm sóc người bệnh truyền nhiễm</span><span style='font-size:9.0pt'> / <span
+                                style='color:#0070C0'>Directly take care of infected people</span></span></p>
+                </td>
+                <td width="28%" valign=top style='width:28.42%;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:20.45pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:-2.85pt;margin-bottom:
+  3.0pt;margin-left:-2.85pt'><span style='font-size:9.0pt'> {{question3Employee}}  </span></p>
+                </td>
+            </tr>
+        </table>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><b><span style='font-size:4.0pt'>&nbsp;</span></b></p>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in;text-align:justify;text-justify:inter-ideograph'><a name="OLE_LINK48"><b><span
+                        style='font-size:9.0pt'>Tôi cam kết những thông tin
+                        trên là đúng sự thật, tôi hiểu rằng nếu cung cấp sai thông tin có thể dẫn đến
+                        những hậu quả nghiêm trọng.</span></b></a><b><span style='font-size:9.0pt'> / <i><span
+                            style='color:#0070C0'>I pledge that the above information is true and I
+                            understand that providing false information may lead to serious
+                            consequences.</span></i></span></b></p>
+
+        <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse'>
+            <tr>
+                
+                <td width="20%" valign=top style='width:20.3%;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><i><span style='font-size:9.0pt'>&nbsp;</span></i></p>
+                </td>
+                <td width="36%" valign=top style='width:36.02%;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span style='font-size:9.0pt'>Ký
+                                tên/<i>Signature</i></span></b></p>
+                </td>
+            </tr>
+            <tr>
+                
+                <td width="20%" valign=top style='width:20.3%;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+  3.0pt;margin-left:0in'><i><span style='font-size:9.0pt'>&nbsp;</span></i></p>
+                </td>
+                <td width="36%" valign=top style='width:36.02%;padding:0in 5.4pt 0in 5.4pt'>
+                    <p class=MsoNormal align=center style='margin-top:30pt;margin-right:0in;
+  margin-bottom:3.0pt;margin-left:0in;text-align:center'><b><span style='font-size:9.0pt'>{{fullname}}</i></span></b></p>
+                </td>
+            </tr>
+        </table>
+
+        <p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><span style='position:relative;z-index:251657728;left:-22px;
+top:46px;width:663px;height:48px'></span><span
+                style='font-size:9.0pt'>&nbsp;</span></p>
+
+    </div>
+
+<script src="/js/angularjs/angular.min.js"></script>
+<script src="/js/angularjs/printController.js"></script>
+</body>
+
+</html>
