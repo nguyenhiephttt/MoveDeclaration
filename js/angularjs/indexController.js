@@ -1,6 +1,8 @@
 var app = angular.module('indexApp', []);
 app.controller('indexCtrl', function ($scope, $http) {
 
+    window.localStorage.removeItem("empcode");
+    window.localStorage.removeItem("company");
     ///company
     $http({
         method: "GET",

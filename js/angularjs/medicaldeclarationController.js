@@ -533,6 +533,7 @@ app.controller('declarationCtrl', function ($scope, $http, $rootScope) {
                         }).then(function mySuccess(response) {
                             $scope.declarationemp = response.data;
                             window.localStorage.removeItem("empcode");
+                            window.localStorage.removeItem("company");
                             window.location.assign("http://192.168.2.12:91/view/successpage.html?contro=" + $scope.declarationemp);
                         }, function myError(response) {
                             $scope.declarationemp = response.statusText;
